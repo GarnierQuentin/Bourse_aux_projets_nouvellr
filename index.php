@@ -15,8 +15,8 @@ $products = wc_get_products(array(
 
 ?>
 
-<form action="index.php" method="post">
-	<input type="text" name="search" placeholder="Rechercher un produit">
+<form action="index.php" method="get">
+	<input type="text" name="s" placeholder="Rechercher un produit">
 	<input type="submit" value="Rechercher">
 </form>
 
