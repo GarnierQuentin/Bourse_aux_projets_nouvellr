@@ -1,4 +1,19 @@
 <?php
+if (is_user_logged_in()){
+    if (isset($_POST['reservation_button'])) {
+        $id_du_post = $_POST['product_id'];
+        update_field("est_reserve", "Oui", $id_du_post);
+        update_field("reserveur_id", get_current_user_id(), $id_du_post);
+        date_default_timezone_set('Europe/Paris');
+        update_field("date_reservation", date('Y-m-d H:i:s'), $id_du_post);
+        wp_redirect(home_url()); // Nouvelle requête HTTP donc la valeur $_POST['reservation_button'] n'existe plus
+        exit();
+    }
+} else{
+    wp_redirect("http://localhost/bap/connexion/");
+    exit();
+}
+
 
 get_header();
 
@@ -36,7 +51,11 @@ echo '<p>État : ' . esc_html($etat) . '</p>';
 echo '<p>Poids (kg) : ' . esc_html($poids_kg) . '</p>';
 
 echo '<p>Date de publication : ' . esc_html(get_the_date()) . '</p>';
-echo apply_filters('the_content', get_the_content());
+
+echo '<form method="post">';
+echo '<input type="hidden" name="product_id" value="' . esc_attr($product_id) . '">';
+echo '<input type="submit" name="reservation_button" value="Réserver">';
+echo '</form>';
 
 get_footer();
 ?>
