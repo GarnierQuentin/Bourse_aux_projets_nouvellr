@@ -35,7 +35,7 @@ if (isset($_POST['id']) && isset($_POST['mot_de_passe']) && isset($_POST['email'
             add_role('client', 'Client', array());
             
             $user = new WP_User($user_id);
-            $user->add_role('client');
+            $user->set_role('client');
         }
     } else {
         // Afficher un message d'erreur si les champs requis ne sont pas remplis
