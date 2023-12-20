@@ -7,7 +7,7 @@ get_header();
         <div class="card_inscription">
             
             <div class="card_inscription_content">
-                <div class="card_inscription_content">
+                <div class="card_inscription_content_title">
                     <h3> Déjà inscrit ? </h3>
                     <h3> Connectez-vous ici</h3>
                 </div>
@@ -17,6 +17,8 @@ get_header();
                 </div>
                 <div class="card_inscription_content_form">
                     <form action="">
+                        <label for=""></label>
+                        <input type="text" name="" id="" placeholder="Identifiant">
                         <div class="form_name">
                         <label for=""></label>
                         <input type="text" placeholder="Prénom">
@@ -30,11 +32,15 @@ get_header();
                         <label for=""></label>
                         <input type="password"placeholder="Mot de passe">
                         <label for=""></label>
-                        <input type="password" placeholder="Confirmer le mot de passe">
-                        <label for=""></label>
+                       
                         
                     </form>
                 </div>
+                <div class="inscription_checkbox" >
+                    <input type="checkbox" name="" id="" value="">
+                    <p> Accepter les conditions générales d'utilisateur</p>
+                </div>
+                
 
                 <div class="inscription_submit">
                     <input type="submit" value="S'inscrire" >
@@ -43,3 +49,7 @@ get_header();
            
         </div>
     </main>
+
+    <?php
+get_footer();
+?>
