@@ -24,7 +24,7 @@ get_header();
                 <li> Identifiant</li>
             </ul>
 
-            <ul>  <h3> Adresse de facturation/livraison</h3>
+            <ul>  <h3> Adresse de facturation</h3>
                 <li>Torcy, 77468</li>
                 <li>18 rue d'Anjoux</li>
                 <li>France</li>
