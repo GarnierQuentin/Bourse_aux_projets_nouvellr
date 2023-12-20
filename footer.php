@@ -6,24 +6,20 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package NouvellR
+ * @package ressourcerietorcy
  */
 
 ?>
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'nouvellr' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'nouvellr' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'nouvellr' ), 'nouvellr', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
+				<ul class="footer_liste">
+					<li> Nos engagements</li>
+					<li> A Propos</li>
+					<li> Mentions légales</li>
+					<li> Informations légales</li>
+					<li> Contactez nous ici</li>
+				</ul>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

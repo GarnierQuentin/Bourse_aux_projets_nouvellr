@@ -1,61 +1,158 @@
 <?php
-if (is_user_logged_in()){
-    if (isset($_POST['reservation_button'])) {
-        $id_du_post = $_POST['product_id'];
-        update_field("est_reserve", "Oui", $id_du_post);
-        update_field("reserveur_id", get_current_user_id(), $id_du_post);
-        date_default_timezone_set('Europe/Paris');
-        update_field("date_reservation", date('Y-m-d H:i:s'), $id_du_post);
-        wp_redirect(home_url()); // Nouvelle requête HTTP donc la valeur $_POST['reservation_button'] n'existe plus
-        exit();
-    }
-} else{
-    wp_redirect("http://localhost/bap/connexion/");
-    exit();
-}
-
 
 get_header();
+?>
 
-// Récupérer l'ID du produit actuel
-$product_id = get_the_ID();
+    <main class="main_produit">
+        <div class="card_produit">
+            <div class="card_produit_content">
+                <img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/soucoupes_grand.png" alt="soucoupes">
+                <div class="card_produit_content_texte">
+                    <h3> 0,50€</h3>
+                    <hr class="produit_hr">
+                    <div class="card_produit_content_texte_liste">
+                        <ul>
+                            <li> Marque</li>
+                            <li> État </li>
+                            <li> Matière</li>
+                            <li> Nombres de vues</li>
+                            <li> Ajouté</li>
+                        </ul>
+                        <ul>
+                            <li> Aucune</li>
+                            <li> Bon état</li>
+                            <li> Porcelaine</li>
+                            <li> 34</li>
+                            <li> il y a 11h</li>
+                        </ul>
+                    </div>
+                    <div class="text_produit">
+                        <p> Autres détails</p>
+                    </div>
+                    
+                    <hr class="produit_hr">
+                    <h3> 4 assiettes en porcelaine</h3>
+                    <div class="text_resume">
+                        <p> 4 assiettes en porcelaine en bon état.</p>
+                    </div>
+    
+                    <hr class="produit_hr">
+                    <div class="produit_link">
+                    <a  href=""> Réserver</a>
+                    <a  href=""> Ajouter aux favoris</a>
+                    </div>
+                   
+                    
+                </div>
 
-// Récupérer les détails du produit
-$product = wc_get_product($product_id);
+                
+            </div>
+        </div>
 
-// Récupérer les détails du produit
-$product_id    = $product->get_id();
-$product_title = $product->get_name();
-$product_price = $product->get_price();
-$product_image = $product->get_image(); // Récupérer l'URL de l'image du produit
+        <div class="card_produit_grid">
+            <div class="card_produit_grid_content">
+                <img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/soucoupes.png" alt="soucoupes">
+                <p> 4 soucoupes</p>
+                <p>0.50€</p>
+                <br>
+                <a href="#"> RESERVER</a>
+            </div>
+            <div class="card_produit_grid_content">
+                <img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/soucoupes.png" alt="soucoupes">
+                <p> 4 soucoupes</p>
+                <p>0.50€</p>
+                <br>
+                <a href="#"> RESERVER</a>
+            </div>
+            <div class="card_produit_grid_content">
+                <img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/soucoupes.png" alt="soucoupes">
+                <p> 4 soucoupes</p>
+                <p>0.50€</p>
+                <br>
+                <a href="#"> RESERVER</a>
+            </div>
+            <div class="card_produit_grid_content">
+                <img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/soucoupes.png" alt="soucoupes">
+                <p> 4 soucoupes</p>
+                <p>0.50€</p>
+                <br>
+                <a href="#"> RESERVER</a>
+            </div>
+            <div class="card_produit_grid_content">
+                <img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/soucoupes.png" alt="soucoupes">
+                <p> 4 soucoupes</p>
+                <p>0.50€</p>
+                <br>
+                <a href="#"> RESERVER</a>
+            </div>
+            <div class="card_produit_grid_content">
+                <img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/soucoupes.png" alt="soucoupes">
+                <p> 4 soucoupes</p>
+                <p>0.50€</p>
+                <br>
+                <a href="#"> RESERVER</a>
+            </div>
+            <div class="card_produit_grid_content">
+                <img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/soucoupes.png" alt="soucoupes">
+                <p> 4 soucoupes</p>
+                <p>0.50€</p>
+                <br>
+                <a href="#"> RESERVER</a>
+            </div>
+            <div class="card_produit_grid_content">
+                <img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/soucoupes.png" alt="soucoupes">
+                <p> 4 soucoupes</p>
+                <p>0.50€</p>
+                <br>
+                <a href="#"> RESERVER</a>
+            </div>
+            <div class="card_produit_grid_content">
+                <img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/soucoupes.png" alt="soucoupes">
+                <p> 4 soucoupes</p>
+                <p>0.50€</p>
+                <br>
+                <a href="#"> RESERVER</a>
+            </div>
+            <div class="card_produit_grid_content">
+                <img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/soucoupes.png" alt="soucoupes">
+                <p> 4 soucoupes</p>
+                <p>0.50€</p>
+                <br>
+                <a href="#"> RESERVER</a>
+            </div>
+            <div class="card_produit_grid_content">
+                <img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/soucoupes.png" alt="soucoupes">
+                <p> 4 soucoupes</p>
+                <p>0.50€</p>
+                <br>
+                <a href="#"> RESERVER</a>
+            </div>
+            <div class="card_produit_grid_content">
+                <img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/soucoupes.png" alt="soucoupes">
+                <p> 4 soucoupes</p>
+                <p>0.50€</p>
+                <br>
+                <a href="#"> RESERVER</a>
+            </div>
+        </div>
+    </main>
 
-// Récupérer les valeurs des champs ACF "États" et "Poids (kg)"
-$etat = get_field('etat', $product_id);
-$poids_kg = get_field('poids_kg', $product_id);
 
-// Récupérer les catégories liées au produit
-$product_categories = wc_get_product_terms($product_id, 'product_cat', array('fields' => 'names'));
 
-// Afficher les détails du produit
-echo '<h1>' . esc_html($product_title) . '</h1>';
-echo '<p>Prix : ' . wc_price($product_price) . '</p>';
-echo '<div class="product-image">' . $product_image . '</div>';
 
-// Afficher les libellés des catégories liées au produit
-if (!empty($product_categories)) {
-    echo '<p>Catégories : ' . implode(', ', $product_categories) . '</p>';
-}
 
-// Afficher les valeurs des champs ACF "États" et "Poids (kg)"
-echo '<p>État : ' . esc_html($etat) . '</p>';
-echo '<p>Poids (kg) : ' . esc_html($poids_kg) . '</p>';
 
-echo '<p>Date de publication : ' . esc_html(get_the_date()) . '</p>';
 
-echo '<form method="post">';
-echo '<input type="hidden" name="product_id" value="' . esc_attr($product_id) . '">';
-echo '<input type="submit" name="reservation_button" value="Réserver">';
-echo '</form>';
+
+
+
+
+
+
+
+<?php
+
 
 get_footer();
+
 ?>

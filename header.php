@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package NouvellR
+ * @package ressourcerietorcy
  */
 
 ?>
@@ -23,37 +23,62 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'nouvellr' ); ?></a>
+
 
 	<header id="masthead" class="site-header">
+		<div class="bandeau_header">
+			<p> Menu déroulant </p>
+		</div>
 		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
+		<nav class="header_nav">
+			<div class="logo_responsive">
+				<div class="logo_n">
+				<img  src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/logo_nouvellr.png" alt="logo Nouvell'R">
+				</div>
+				<div class="menu_deroulant_index">
+					<img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/menu_header.png" alt="menu déroulant">
+				</div>
+			</div>
+			
+			<form class="form_recherche" action="">
+				<label for="recherche_produit">	</label>
+				<input type="text" placeholder="Rechercher un produit ">
+				<img class="logo_loop" src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/loop.png" alt="logo loop">
+				
+			</form>
+			<img class="logo_shop" src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/shoop.png" alt="logo shop">
+			<div class="title_header_index">
+				<h3 > MES RÉSERVATIONS</h3>
+			</div>
+			
+			<img class="logo_profil" src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/profil.png" alt="logo profil">
+		</nav>
+			 <?php 
+			
+			/* if ( is_front_page() && is_home() ) :
 				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php
 			else :
 				?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
-			endif;
-			$nouvellr_description = get_bloginfo( 'description', 'display' );
-			if ( $nouvellr_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $nouvellr_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+			endif; */
+				/* $ressourcerietorcy_description = get_bloginfo( 'description', 'display' );
+				if ( $ressourcerietorcy_description || is_customize_preview() ) :
+					?>
+					<p class="site-description"><?php echo $ressourcerietorcy_description;  ?></p>
 			<?php endif; ?>
-		</div><!-- .site-branding -->
+		</div> */
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'nouvellr' ); ?></button>
-			<?php
-			wp_nav_menu(
+		/*== <nav id="site-navigation" class="main-navigation">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ressourcerietorcy' ); ?></button>
+			<?php */
+			/* wp_nav_menu(
 				array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
 				)
-			);
+			); */
 			?>
-		</nav><!-- #site-navigation -->
+		
 	</header><!-- #masthead -->

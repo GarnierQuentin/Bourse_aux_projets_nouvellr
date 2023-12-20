@@ -1,48 +1,44 @@
 <?php
 
-
-
-
-
-function custom_login_process() {
-    if (isset($_POST['login_submit'])) {
-        $user_email = sanitize_email($_POST['user_email']);
-        $password   = $_POST['password'];
-
-        $user = get_user_by('email', $user_email);
-
-        if ($user && wp_check_password($password, $user->user_pass, $user->ID)) {
-            // Connexion réussie
-            wp_set_auth_cookie($user->ID, true);
-            echo '<p class="success-message">Connexion réussie.</p>';
-        } else {
-            // Échec de la connexion
-            echo '<p class="error-message">Adresse e-mail ou mot de passe incorrect.</p>';
-        }
-    }
-}
-
-custom_login_process();
-
 get_header();
+?>
 
-if (is_user_logged_in()){
-    echo '<p>Bienvenue, ' . esc_html(wp_get_current_user()->display_name) . '!</p>';
-}
-else{
-    ?>
-    <h2>Connexion</h2>
-    <form method="post" action="">
-        <label for="user_email">Adresse e-mail :</label>
-        <input type="email" name="user_email" id="user_email" required>
+    <main class="main_connexion">
+        <div class="card_connexion">
+            <div class="card_connexion_content">
+                <div class="title_connexion">
+                    <h1>CONNEXION</h1>
+                </div>
+                <div class="texte_champ">
+                    <p>*champs obligatoires</p>
+                </div>
+                
+                <form action="">
+                    <div class="login_connexion">
+                    <label for="email"></label>
+                    <input type="text" name="" id="" placeholder="Adresse e-mail">
+                    <label for="password"></label>
+                    <input type="text" placeholder="Mot de passe">
+                    </div>
+                    
 
-        <label for="password">Mot de passe :</label>
-        <input type="password" name="password" id="password" required>
+                    
+                    <div class="btn_connexion">
+                    <label for=""></label>
+                    <input type="submit" name="" id="" value="Se connecter">
+                    </div>
 
-        <input type="submit" name="login_submit" value="Se connecter">
-    </form>
-    <?php
-}
+                    <div class="text_compte">
+                        <p> Je n'ai pas de compte, je m'inscris</p>
+                    </div>
+            </div>
+            
+                
+                
+            </form>
+        </div>
+    </main>
 
+<?php
 get_footer();
 ?>

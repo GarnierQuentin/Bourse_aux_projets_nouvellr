@@ -1,0 +1,49 @@
+@import 'scss/mixins.scss';
+@import 'scss/font.scss';
+@import 'scss/variables.scss';
+@import 'scss/normalize.scss';
+@import 'scss/footer.scss';
+@import 'scss/header.scss';
+@import 'scss/index.scss';
+@import 'scss/saisie.scss';
+@import 'scss/traitement.scss';
+@import 'scss/connexion.scss';
+@import 'scss/inscription.scss';
+@import 'scss/compte.scss';
+@import 'scss/produit.scss';
+@import 'scss/apropos.scss';
+@import 'scss/recherche.scss';
+@import 'scss/valeur.scss';
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+body {
+    height: 100vh;
+  }
+   
+   
+   

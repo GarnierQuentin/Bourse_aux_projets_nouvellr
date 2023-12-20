@@ -1,49 +1,135 @@
 <?php
+/**
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package ressourcerietorcy
+ */
+
 get_header();
-
-// Récupérer la valeur de recherche
-$search_query = isset($_POST['search']) ? sanitize_text_field($_POST['search']) : '';
-
-$like_search_query = $search_query;
-
-// Récupérer tous les produits WooCommerce qui correspondent à la recherche
-$products = wc_get_products(array(
-    'orderby' => 'date',
-    'order'   => 'DESC',
-    's'       => $like_search_query, // Utiliser le paramètre 's' pour la recherche
-));
-
 ?>
 
-<form action="index.php" method="get">
-	<input type="text" name="s" placeholder="Rechercher un produit">
-	<input type="submit" value="Rechercher">
-</form>
+	<main id="primary" class="site-main">
 
-<?php
+		<div class="name_connexion">
+			<p> Vous êtes connecté(e), bienvenue chez Nouvell'R </p>
+		</div>
 
-// Vérifier si des produits ont été trouvés
-if ($products) {
-    // Afficher chaque produit séparément
-    foreach ($products as $product) {
-        // Récupérer les détails du produit
-        $product_id    = $product->get_id();
-        $product_title = $product->get_name();
-        $product_price = $product->get_price();
-        $product_image = $product->get_image(); // Récupérer l'URL de l'image du produit
 
-        // Afficher les détails du produit
-        echo '<div class="product-image">' . $product_image . '</div>';
-        echo '<h2>' . esc_html($product_title) . '</h2>';
-        echo '<p>Prix : ' . wc_price($product_price) . '</p>';
-        echo '<a href="' . esc_url(get_permalink($product_id)) . '">Voir le produit</a>';
-        echo '<hr>';
-    }
-} else {
-    echo 'Aucun produit trouvé.';
-}
+		<div class="index_slogan">
+			<div class="index_slogan_text">
+			<h4> TORCY DONNE, TORCY RENVOIE : OFFREZ UNE SECOND VIE</h4>
+	<!-- 		<br> -->
+			<div class="index_slogan_text2">
+				<h4>À VOS OBJETS DU QUOTIDIEN ! </h4>
+			</div>
+			</div>
+			
+			
+		</div>
 
-?>
+		<div class="title1">
+			<h3> Nos produits </h3>
+		</div>
 
-<?php
-get_footer();
+		<div class="container_card_product">
+			<div class="card_product">
+				
+				<img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/soucoupes_radus.png" alt="soucoupes">
+				<p class="card_product_soucoupes"> 4 SOUCOUPES </p>
+				<p class="card_product_price"> 0.50€ </p>	
+				<a class="btn_reserver" href="#"> Réserver</a>
+			</div>
+
+			<div class="card_product">
+				
+				<img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/tasse.png" alt="soucoupes ">
+				<p class="card_product_soucoupes"> TASSE MAGNÉTISANTE </p>
+				<p class="card_product_price"> 3€ </p>	
+				<a class="btn_reserver" href="#"> Réserver</a>
+			</div>
+
+			<div class="card_product">
+				
+				<img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/bougie.png" alt=" soucoupes">
+				<p class="card_product_soucoupes"> PORTE BOUGIE </p>
+				<p class="card_product_price"> 0.50€ </p>	
+				<a class="btn_reserver" href="#"> Réserver</a>
+			</div>
+
+			<div class="card_product">
+				
+				<img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/litiere.png" alt="soucoupes  ">
+				<p class="card_product_soucoupes"> BAC LITIÊRE CHAT </p>
+				<p class="card_product_price"> 2€ </p>	
+				<a class="btn_reserver" href="#"> Réserver</a>
+			</div>
+		
+
+			<div class="card_product">
+				
+				<img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/coquetiers.png" alt="soucoupes  ">
+				<p class="card_product_soucoupes"> 6 COQUETIERS </p>
+				<p class="card_product_price"> 1€ </p>	
+				<a class="btn_reserver" href="#"> Réserver</a>
+				
+			</div>
+
+			<div class="card_product">
+				
+				<img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/lavage.png" alt="soucoupes  ">
+				<p class="card_product_soucoupes"> BOULE DE LAVAGE </p>
+				<p class="card_product_price"> 3€ </p>	
+				<a class="btn_reserver" href="#"> Réserver</a>
+			</div>
+
+		</div>
+
+		<div class="index_arrow">
+			<p> Tout voir </p>
+			<img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/index_arrow.png" alt="">
+		</div>
+
+
+		<div class="index_valeur">
+			<br>
+			<h4> NOS VALEURS </h4>
+			<div class="index_valeur_content">
+				<div class="index_valeur_content_img">
+					<img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/help.png" alt="">
+					<p> Lorem ipsum</p>
+				</div>
+				<div class="index_valeur_content_img">
+					<img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/tri.png" alt="">
+					<p> Lorem ipsum</p>
+				</div>
+				<div class="index_valeur_content_img">
+					<img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/communication.png" alt="">
+					<p> Lorem ipsum</p>
+				</div>
+			</div>
+			
+		</div>
+
+			
+	
+
+	
+	
+		
+		<?php 
+		
+		?> 
+
+	</main>
+
+<?php 
+
+/*  get_sidebar();  */	
+get_footer(); 
