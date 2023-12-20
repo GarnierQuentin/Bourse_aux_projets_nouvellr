@@ -1,37 +1,72 @@
 <?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package ping_pong
- */
+if (isset($_POST['reservation_button'])){
+    if (is_user_logged_in()) {
+        $id_du_post = $_POST['product_id'];
+        update_field("est_reserve", "Oui", $id_du_post);
+        update_field("reserveur_id", get_current_user_id(), $id_du_post);
+        date_default_timezone_set('Europe/Paris');
+        update_field("date_reservation", date('Y-m-d H:i:s'), $id_du_post);
+        wp_redirect(home_url()); // Nouvelle requête HTTP donc la valeur $_POST['reservation_button'] n'existe plus
+        exit();
+    }
+    else{
+        wp_redirect("http://localhost/bap/connexion/");
+        exit();
+    }
+}
 
 get_header();
+
+// Récupérer la valeur de recherche
+$search_query = isset($_POST['search']) ? sanitize_text_field($_POST['search']) : '';
+
+$like_search_query = $search_query;
+
+// Récupérer tous les produits WooCommerce qui correspondent à la recherche
+$products = wc_get_products(array(
+    'orderby' => 'date',
+    'order'   => 'DESC',
+    's'       => $like_search_query, // Utiliser le paramètre 's' pour la recherche
+));
+
 ?>
 
-	<main id="primary" class="site-main">
+<form action="index.php" method="post">
+	<input type="text" name="search" placeholder="Rechercher un produit">
+	<input type="submit" value="Rechercher">
+</form>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+<?php
 
-			?>
+// Vérifier si des produits ont été trouvés
+if ($products) {
+    // Afficher chaque produit séparément
+    foreach ($products as $product) {
+        // Récupérer les détails du produit
+        $product_id    = $product->get_id();
+        $product_title = $product->get_name();
+        $product_price = $product->get_price();
+        $product_image = $product->get_image(); // Récupérer l'URL de l'image du produit
 
-			<div class="single_picture">
-			<?php the_post_thumbnail(); ?>
-			</div>
+        $est_reserve = get_field('est_reserve', $product_id);
 
-			<div class="single_title">
-				<h1> <?php the_title(); ?> </h1>
-			</div>
+        if ($est_reserve == "Non") {
+            // Afficher les détails du produit
+            echo '<div class="product-image">' . $product_image . '</div>';
+            echo '<h2>' . esc_html($product_title) . '</h2>';
+            echo '<p>Prix : ' . wc_price($product_price) . '</p>';
+            echo '<a href="' . esc_url(get_permalink($product_id)) . '">Voir le produit</a>';
+            echo '<form method="post">';
+            echo '<input type="hidden" name="product_id" value="' . esc_attr($product_id) . '">';
+            echo '<input type="submit" name="reservation_button" value="Réserver">';
+            echo '</form>';
+        }
+    }
+} else {
+    echo 'Aucun produit trouvé.';
+}
 
-			<div class="single_content">
-				<?php the_content(); ?>
-			</div>
+?>
 
-		<?php
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
+<?php
+get_footer();
