@@ -1,0 +1,36 @@
+.card_traitement {
+    @extend .card_saisie;
+
+    .card_traitement_content {
+        display: flex;
+        justify-content: center;
+        margin-left: 25%;
+        width: 55%;
+        align-items: center;
+        padding: 3%;
+        border-radius: 45px;
+        margin-bottom: 5%;
+        background-color: rgba(255, 255, 255, 0.5);
+
+        img {
+            width:55%;
+            height: 55%;
+        }
+    }
+}
+
+.card_traitement_liste {
+    li {
+        font-family: $outfit;
+        font-size: $size;
+    }
+}
+
+.title_saisie {
+
+    h1{
+    font-family: $palitoon;
+    font-size: 45px;
+    }
+    
+}

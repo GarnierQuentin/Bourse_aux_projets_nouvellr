@@ -1,0 +1,34 @@
+
+.card_recherche {
+    display: grid;
+    grid-template-columns: repeat(3, 20%); /* Trois colonnes égales */
+    justify-content: center;
+    grid-gap: 6rem;
+    text-align: center;
+    margin-bottom: 7%;
+    overflow-x: hidden;
+
+    &_content {
+        @extend .card_product;
+    }
+}
+
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-family: $palitoon;
+    color: $green;
+    font-size: $size;
+  }
+  
+  .nb_recherche {
+    color: #CBCBCB;
+    font-size: 25px;
+    font-family: $inter;
+    margin-left: 13%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+  }
+  
+  
