@@ -57,5 +57,9 @@ echo '<input type="hidden" name="product_id" value="' . esc_attr($product_id) . 
 echo '<input type="submit" name="reservation_button" value="Réserver">';
 echo '</form>';
 
+echo "<br><br>";
+
+echo do_shortcode('[contact-form-7 id="754170b" title="Formulaire de contact 1"]');
+
 get_footer();
 ?>
