@@ -33,7 +33,7 @@
 		<nav class="header_nav">
 			<div class="logo_responsive">
 				<div class="logo_n">
-				<img  src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/logo_nouvellr.png" alt="logo Nouvell'R">
+				<img  src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/logo_last_nouvellr.png" alt="logo Nouvell'R">
 				</div>
 				<div class="menu_deroulant_index">
 					<img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/menu_header.png" alt="menu déroulant">

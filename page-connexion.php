@@ -16,16 +16,16 @@ get_header();
                 <form action="">
                     <div class="login_connexion">
                     <label for="email"></label>
-                    <input type="text" name="" id="" placeholder="Adresse e-mail">
+                    <input type="text" name="" id="" placeholder="Adresse e-mail" required>
                     <label for="password"></label>
-                    <input type="text" placeholder="Mot de passe">
+                    <input type="text" placeholder="Mot de passe" required>
                     </div>
                     
 
                     
                     <div class="btn_connexion">
                     <label for=""></label>
-                    <input type="submit" name="" id="" value="Se connecter">
+                    <input type="submit" name="" id="" value="Se connecter" >
                     </div>
 
                     <div class="text_compte">
