@@ -17,10 +17,18 @@
 					<li> Nos engagements</li>
 					<li> A Propos</li>
 					<li> Mentions légales</li>
-					<li> Informations légales</li>
 					<li> Contactez nous ici</li>
 				</ul>
+				<div class="footer_hr">
+					<hr>
+				</div>
+			<div class="footer_logo">
+				<a href=""> <img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/logo_insta.png" alt="logo insta"> </a>
+				<a href=""> <img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/logo_facebook.png" alt="logo facebook"></a>
+				<a href=""> <img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/logo_tiktok.png" alt="logo tiktok"></a>
+			</div>
 		</div><!-- .site-info -->
+		
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
