@@ -1,5 +1,5 @@
 .main_produit {
-    height: 325vh;
+    height: auto;
 
 }
 
@@ -11,6 +11,10 @@
       content: "";
       width: 100%;
       padding-top: calc($height / $width) * 100%;
+    }
+
+    figcaption::before {
+        padding-top: 0px;
     }
       
     > img {
@@ -35,6 +39,7 @@
       max-width: 1044px;
       margin: 0 auto;
       padding: 0 20px;
+      height: auto;
   }
   
   .carousel {
@@ -210,36 +215,82 @@
           object-fit: cover;
       }
   }
+
+.carousel__slide div:before {
+    display: none;
+    content: "";
+    width: 100%;
+    padding-top: 0;
+
+    @include breakpoint(1000px, 'max') {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: 33.333333%;
+    }
+}
     
 
 .card_produit {
     display: flex;
     justify-content: center;
-    height: 350vh;
+    flex-direction: column;
+    height: auto;
     width: 100%;
     background-image: url(http://ressourcerie-torcy.test/wp-content/uploads/2023/12/article_bg.png);
     background-repeat: no-repeat;
     background-size: 100%;
 
+    @include breakpoint(1000px, 'max') {
+        height: 150%;
+        background-size: 200%;
+    }
+
+    
+
+
+
+
     &_content {
-        margin-top: 10%;
+       /*  margin-top: 10%; */
         display: flex;
         width: 80%;
-        height: 90vh;
+        height: auto;
 
-        &_texte::before{
-            padding-top: 0% !important;
+        &::before {
+            content: "";
+            width: 100%;
+
+            @include breakpoint(1000px, 'max') {
+            display: none;
+            }
+           
         }
 
+        
+
+
         &_texte {
-            background-color: white;
             width: 100%;
+
+            p {
+                color: black;
+            }
 
             h3 {
                 font-family: $outfit;
                 font-weight: 500;
                 font-size: 30px;
-                margin-left: 12%;
+                text-decoration: underline;
+            }
+
+            h4 {
+                font-family: $outfit;
+                font-weight: 100;
+                font-size: 25px;
+               
+                color: #848484;
+                margin-top: 2%;
             }
 
             hr {
@@ -290,6 +341,10 @@
             }
         }
 
+        &_texte:before{
+            padding-top: 0px;
+        }
+
         img {
             width: 55%;
             object-fit: cover;
@@ -336,20 +391,98 @@
     }
 }
 
-.card_produit_grid {
-    display: grid;
-    grid-template-columns: repeat(4, 20%);
-    justify-content: center;
-    height: 80vh;
-    width: 100%;
-    grid-gap: 1%;
+.card_question {
+    width: 80%;
+    border-radius: 40px;
+    margin-left:  10%;
+    height: 120vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 5%;
+    margin-bottom: 2rem;
+
+    &_title1 {
+        margin-top: 2rem;
+        color: #000;
+        text-align: center;
+        font-family: $palitoon;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+
+        @include breakpoint(800px, 'max') {
+            font-size: 30px;
+        }
+
+        @include breakpoint(500px, 'max') {
+            font-size: 20px;
+        }
 
 
-    &_content {
-        @extend .card_reservation_content;
-
-        margin-top: 0%;
-        margin-left: 0%;
     }
+
+    &_title2 {
+    color: #000;
+    margin-left: 6%;
+
+    /* Outfit Regular 30 */
+    font-family: $outfit;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+
+    @include breakpoint(800px, 'max') {
+        font-size: 20px;
+    
+    }
+
+    @include breakpoint(500px, 'max') {
+        font-size: 15px;
+    
+    }
+
 }
 
+    &_form {
+
+        input {
+            margin-left: 9%;
+            font-family: $outfit;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            width: 80%;
+            border: 0px;
+            color: black;
+            background-color: transparent;
+            border-bottom: 2px solid black;
+        }
+    }
+
+    &_reponse {
+        margin-left: 9%;
+        margin-top: 2rem;
+        width: 80%;
+        border-radius: 22px;
+        background: rgba(26, 67, 1, 0.12);  
+        
+        p {
+            margin-left: 1rem;
+            color: black;
+
+        /* Outfit Regular 30 */
+        font-family: $outfit;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        }
+
+        p:nth-child(2) {
+            color: #828282;
+            font-family: Outfit;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 200;
+        }
+    }
+
+}
