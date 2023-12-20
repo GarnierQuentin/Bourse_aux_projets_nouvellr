@@ -37,6 +37,11 @@
 				</div>
 				<div class="menu_deroulant_index">
 					<img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/menu_header.png" alt="menu déroulant">
+						<ul class="sous-menu">
+							<li><a href="#"> Mes réservations</a></li>
+							<li><a href="#"> Me connecter</a></li>
+							<li><a href="#"> Page admin</a></li>
+						</ul>
 				</div>
 			</div>
 			
@@ -46,12 +51,23 @@
 				<img class="logo_loop" src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/loop.png" alt="logo loop">
 				
 			</form>
-			<img class="logo_shop" src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/shoop.png" alt="logo shop">
-			<div class="title_header_index">
+
+			<div class="logo_header">
+			<img  src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/shoop.png" alt="logo shop">
 				<h3 > MES RÉSERVATIONS</h3>
 			</div>
 			
-			<img class="logo_profil" src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/profil.png" alt="logo profil">
+	
+			<div class="logo_header">
+			<img  src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/logo_connexion_header.png" alt="logo profil">
+			<h3> ME CONNECTER/M'INSCRIRE</h3>
+			</div>
+
+			<div class="logo_header">
+			<img  src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/logo_admin.png" alt="logo admin">
+			<h3> PAGE ADMINISTRATEUR</h3>
+			</div>
+			
 		</nav>
 			 <?php 
 			
