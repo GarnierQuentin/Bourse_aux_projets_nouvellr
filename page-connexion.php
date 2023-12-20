@@ -1,9 +1,5 @@
 <?php
 
-
-
-
-
 function custom_login_process() {
     if (isset($_POST['login_submit'])) {
         $user_email = sanitize_email($_POST['user_email']);
@@ -26,23 +22,43 @@ custom_login_process();
 
 get_header();
 
-if (is_user_logged_in()){
-    echo '<p>Bienvenue, ' . esc_html(wp_get_current_user()->display_name) . '!</p>';
-}
-else{
+
     ?>
-    <h2>Connexion</h2>
-    <form method="post" action="">
-        <label for="user_email">Adresse e-mail :</label>
-        <input type="email" name="user_email" id="user_email" required>
+<main class="main_connexion">
+    <div class="card_connexion">
+        <div class="card_connexion_content">
+            <div class="title_connexion">
+                <h1>CONNEXION</h1>
+            </div>
+            
+            <form action="" method="post">
 
-        <label for="password">Mot de passe :</label>
-        <input type="password" name="password" id="password" required>
+                <div class="login_connexion">
+                    <label for="user_email">Adresse e-mail :</label>
+                    <input type="email" name="user_email" id="user_email" required>
 
-        <input type="submit" name="login_submit" value="Se connecter">
-    </form>
-    <?php
-}
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+                
+
+                
+                <div class="btn_connexion">
+                    <input type="submit" name="login_submit" value="Se connecter">
+                </div>
+
+                <div class="text_compte">
+                    <a href="inscription">
+                        <p> Je n'ai pas de compte, je m'inscris</p>
+                    </a>
+                </div>
+            </form>            
+        </div>
+    </div>
+</main>
+<?php
+
+    
 
 get_footer();
 ?>

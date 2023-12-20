@@ -1,7 +1,9 @@
 <?php
 
 if (isset($_POST['id']) && isset($_POST['mot_de_passe']) && isset($_POST['email']) && isset($_POST['prenom']) && isset($_POST['nom'])) {
+    echo 'Je ressois les données';
     if ($_POST['id'] != '' && $_POST['mot_de_passe'] != '' && $_POST['email'] != '' && $_POST['prenom'] != '' && $_POST['nom'] != '') {
+        echo 'Je remplis les conditions';
         if (username_exists($_POST['id'])) {
             // L'ID est déjà pris
             echo "Erreur : L'ID est déjà pris par un autre utilisateur.";
@@ -10,6 +12,7 @@ if (isset($_POST['id']) && isset($_POST['mot_de_passe']) && isset($_POST['email'
             echo "Erreur : L'adresse e-mail est déjà prise par un autre utilisateur.";
         } else {
             // L'ID est disponible
+            echo 'Je peux créer l\'utilisateur';
             if ($_POST['user_adresse'] == '') {
                 $_POST['user_adresse'] = 'Non renseigné';
             }
@@ -24,8 +27,6 @@ if (isset($_POST['id']) && isset($_POST['mot_de_passe']) && isset($_POST['email'
                 'user_email'    => $_POST['email'],
                 'first_name'    => $_POST['prenom'],
                 'last_name'     => $_POST['nom'],
-                'user_url'      => $_POST['user_adresse'],
-                'phone_number'  => $_POST['phone_number'],
             );
 
             $insert_user = wp_insert_user($user_data);
@@ -41,6 +42,8 @@ if (isset($_POST['id']) && isset($_POST['mot_de_passe']) && isset($_POST['email'
         // Afficher un message d'erreur si les champs requis ne sont pas remplis
         echo 'Erreur : Veuillez remplir tous les champs requis.';
     }
+}else{
+    echo 'Je ne reçois pas les données';
 }
 
 get_header();
@@ -48,32 +51,52 @@ get_header();
 ?>
 
 
-<h1>Inscription</h1>
+<main>
+        <div class="card_inscription">
+            
+            <div class="card_inscription_content">
+                <div class="card_inscription_content_title">
+                    <h3> Déjà inscrit ? </h3>
+                    <h3><a href="connexion">Connectez-vous ici</a></h3>
+                </div>
+               
+                <div class="title_inscription">
+                    <h1> INSCRIPTION</h1>
+                </div>
+                <div class="card_inscription_content_form">
 
-<form method="post" action="">
-    <label for="id">Identifiant :</label>
-    <input type="text" name="id" required>
+                    <form action="" method="post">
+                        <input type="text" name="id" placeholder="Identifiant" required>
 
-    <label for="mot_de_passe">Mot de passe :</label>
-    <input type="password" name="mot_de_passe" required>
+                        <div class="form_name">
 
-    <label for="email">Adresse e-mail :</label>
-    <input type="email" name="email" required>
+                            <input type="text" name="prenom" placeholder="Prénom" required>
 
-    <label for="prenom">Prénom :</label>
-    <input type="text" name="prenom" required>
+                            <input type="text" name="nom" placeholder="Nom" required>
 
-    <label for="nom">Nom :</label>
-    <input type="text" name="nom" required>
+                        </div>
 
-    <label for="user_adresse">Adresse :</label>
-    <input type="text" name="user_adresse">
 
-    <label for="phone_number">Numéro de téléphone :</label>
-    <input type="tel" name="phone_number">
+                        <input type="email" name="email" placeholder="Adresse e-mail" required>
 
-    <input type="submit" value="S'inscrire">
-</form>
+                        <input type="password" name="mot_de_passe" placeholder="Mot de passe" required>
+
+                        <div class="inscription_checkbox" >
+                            <input type="checkbox" name="" id="" value="" required>
+                            <p> Accepter les <a href="conditions">conditions générales d'utilisateur</a></p>
+                        </div>
+
+                        <div class="inscription_submit">
+                            <input type="submit" value="S'inscrire">
+                        </div>            
+                        
+                    </form>
+
+                </div>
+            </div>
+           
+        </div>
+    </main>
 
 
 <?php

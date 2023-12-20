@@ -1,6 +1,14 @@
+<body>
+<main id="primary" class="site-main">
+
 <?php
 if (isset($_POST['reservation_button'])){
     if (is_user_logged_in()) {
+        ?>
+        <div class="name_connexion">
+            <p> Vous êtes connecté(e), bienvenue chez Nouvell'R </p>
+        </div>
+        <?php
         $id_du_post = $_POST['product_id'];
         update_field("est_reserve", "Oui", $id_du_post);
         update_field("reserveur_id", get_current_user_id(), $id_du_post);
@@ -31,10 +39,24 @@ $products = wc_get_products(array(
 
 ?>
 
-<form action="index.php" method="post">
-	<input type="text" name="search" placeholder="Rechercher un produit">
-	<input type="submit" value="Rechercher">
-</form>
+
+<div class="index_slogan">
+	<div class="index_slogan_text">
+	<h4> TORCY DONNE, TORCY RENVOIE : OFFREZ UNE SECOND VIE</h4>
+<!-- 		<br> -->
+	<div class="index_slogan_text2">
+		<h4>À VOS OBJETS DU QUOTIDIEN ! </h4>
+	</div>
+	</div>
+	
+	
+</div>
+
+<div class="title1">
+	<h3> Nos produits </h3>
+</div>
+
+<div class="container_card_product">
 
 <?php
 
@@ -52,14 +74,16 @@ if ($products) {
 
         if ($est_reserve == "Non") {
             // Afficher les détails du produit
-            echo '<div class="product-image">' . $product_image . '</div>';
-            echo '<h2>' . esc_html($product_title) . '</h2>';
-            echo '<p>Prix : ' . wc_price($product_price) . '</p>';
+            echo "<div class='card_product'>";
+            echo $product_image;
+            echo "<p class='card_product_soucoupes'>" . esc_html($product_title) . "</p>";
+            echo "<p class='card_product_price'>" . wc_price($product_price) . "</p>";	
             echo '<a href="' . esc_url(get_permalink($product_id)) . '">Voir le produit</a>';
-            echo '<form method="post">';
+            echo '<form method="post" class="btn_reserver">';
             echo '<input type="hidden" name="product_id" value="' . esc_attr($product_id) . '">';
             echo '<input type="submit" name="reservation_button" value="Réserver">';
             echo '</form>';
+            echo "</div>";
         }
     }
 } else {
@@ -67,6 +91,45 @@ if ($products) {
 }
 
 ?>
+
+
+</div>
+
+
+<div class="index_valeur">
+	<br>
+	<h4> NOS VALEURS </h4>
+	<div class="index_valeur_content">
+		<div class="index_valeur_content_img">
+			<img src="http://bap.test/wp-content/uploads/2023/12/help.png" alt="">
+			<p> Lorem ipsum</p>
+		</div>
+		<div class="index_valeur_content_img">
+			<img src="http://bap.test/wp-content/uploads/2023/12/tri.png" alt="">
+			<p> Lorem ipsum</p>
+		</div>
+		<div class="index_valeur_content_img">
+			<img src="http://bap.test/wp-content/uploads/2023/12/communication.png" alt="">
+			<p> Lorem ipsum</p>
+		</div>
+	</div>
+	
+</div>
+
+	
+
+
+
+
+
+<?php 
+
+?> 
+
+</main>
+</body>
+
+
 
 <?php
 get_footer();
