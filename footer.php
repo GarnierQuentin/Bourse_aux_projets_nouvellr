@@ -6,25 +6,29 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package NouvellR
+ * @package ressourcerietorcy
  */
 
 ?>
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'nouvellr' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'nouvellr' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'nouvellr' ), 'nouvellr', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
+				<ul class="footer_liste">
+					<li> Nos engagements</li>
+					<li> A Propos</li>
+					<li> Mentions légales</li>
+					<li> Contactez nous ici</li>
+				</ul>
+				<div class="footer_hr">
+					<hr>
+				</div>
+			<div class="footer_logo">
+				<a href=""> <img src="http://bap.test/wp-content/uploads/2023/12/logo_insta.png" alt="logo insta"> </a>
+				<a href=""> <img src="http://bap.test/wp-content/uploads/2023/12/logo_facebook.png" alt="logo facebook"></a>
+				<a href=""> <img src="http://bap.test/wp-content/uploads/2023/12/logo_tiktok.png" alt="logo tiktok"></a>
+			</div>
 		</div><!-- .site-info -->
+		
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
