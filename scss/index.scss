@@ -30,6 +30,22 @@
         height: 100vh;
         display: flex;
         flex-direction: column;
+
+        @include breakpoint (1220px, 'max'){
+            height: 80vh;
+        }
+
+        @include breakpoint (990px, 'max'){
+            height: 70vh;
+        }
+
+        @include breakpoint (800px, 'max'){
+            height: 60vh;
+        }
+
+        @include breakpoint (600px, 'max'){
+            height: 50vh;
+        }
         
         .index_slogan_text {
             width: 100%;
@@ -40,6 +56,28 @@
             font-family: $palitoon;
             font-size: 75px;
             color: $green;
+
+            @include breakpoint (1220px, 'max'){
+                font-size: 50px;
+            }
+
+            @include breakpoint (990px, 'max'){
+                font-size: 40px;
+            }
+
+            @include breakpoint (800px, 'max'){
+                font-size: 30px;
+                text-align: center;
+            }
+
+
+            @include breakpoint (600px, 'max'){
+                font-size: 20px;
+            }
+
+            @include breakpoint (400px, 'max'){
+                font-size: 18px;
+            }
 
             h4{
                 margin-right: 2%;
@@ -87,6 +125,21 @@
         justify-content: center;
         text-align: center;
         margin-left: 10%; /* Marge à gauche en pourcentage */
+
+        @include breakpoint (1220px, 'max'){
+            margin-left: 5%;
+        }
+
+        @include breakpoint (990px, 'max'){
+            margin-left: 5%;
+            grid-template-columns: repeat(auto-fill, minmax(calc(50% - 0.25rem), 1fr));
+        }
+
+        /* @include breakpoint (600px, 'max'){
+            grid-template-columns: repeat(auto-fill, minmax(calc(100% - 0.25rem), 1fr));
+        } */
+
+
     }
     
     
@@ -103,6 +156,18 @@
         background-image: url(http://ressourcerie-torcy.test/wp-content/uploads/2023/12/index_grid_bg.png);
         background-repeat: no-repeat;   
         background-size: 100%;
+
+        @include breakpoint (1220px, 'max'){
+            width: 25vw;
+        }
+
+        @include breakpoint (990px, 'max'){
+            width: 40vw;
+        }
+
+        @include breakpoint (600px, 'max'){
+            width: 45vw;
+        }
 
         img {
             margin-top: 15%;
@@ -171,6 +236,34 @@
     background-size: 120%;
     height: 75vh;
 
+    @include breakpoint (1220px, 'max'){
+        background-size: 150%;
+        height: 95vh;
+        overflow: hidden;
+    }
+
+    @include breakpoint (990px, 'max'){
+        background-size: 230%;
+        height: 85vh;
+        
+    }
+
+    @include breakpoint (700px, 'max'){
+        background-size: 250%;
+        height: 80vh;
+    }
+
+    @include breakpoint (650px, 'max'){
+        background-size: 270%;
+        height: 75vh;
+    }
+
+    @include breakpoint (600px, 'max'){
+        background-size:  300%;
+        height: 75vh;
+    }
+
+
     h4{
         margin-top: 10%;
         margin-left: 8%;
@@ -185,12 +278,41 @@
         display: flex;
         justify-content: space-evenly;
         text-align: center;
+        gap: 1rem;
+
+
+        @include breakpoint (1000px, 'max'){
+            flex-direction: column;
+            align-items: center;
+            margin-top: 0%;
+        }
 
         p{
             font-family: $outfit;
             font-size: 40px;
             font-weight: 100;
             color: $green;
+
+            @include breakpoint (1000px, 'max'){
+                font-size: 30px;
+            }
+
+            @include breakpoint (600px, 'max'){
+                font-size: 25px;
+            }
+        }
+
+        img {
+
+            @include breakpoint (1000px, 'max'){
+                width: 30%;
+            }
+
+            @include breakpoint (600px, 'max'){
+                width: 35%;
+            }
+
+
         }
     }
 }
