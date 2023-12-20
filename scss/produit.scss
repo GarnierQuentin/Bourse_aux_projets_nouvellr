@@ -1,0 +1,145 @@
+.main_produit {
+    height: 325vh;
+
+}
+    
+
+.card_produit {
+    display: flex;
+    justify-content: center;
+    height: 150vh;
+    width: 100%;
+    background-image: url(http://ressourcerie-torcy.test/wp-content/uploads/2023/12/produit_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    &_content {
+        margin-top: 10%;
+        display: flex;
+        background-color: rgba(239, 239, 239, 0.5);
+        padding: 3%;
+        width: 80%;
+        height: 90vh;
+
+        &_texte {
+            background-color: white;
+            width: 100%;
+
+            h3 {
+                font-family: $outfit;
+                font-weight: 500;
+                font-size: 30px;
+                margin-left: 12%;
+            }
+
+            hr {
+                width: 80%;
+                margin-left: 12%;
+                margin-bottom: 2%;
+                border: 1px solid #D9D9D9;
+            }
+
+            .text_produit {
+                display: flex;
+                justify-content: center;
+
+                p{
+                    font-family: $outfit;
+                    font-weight: 600;
+                    color: $gray2;
+                }
+            }
+
+            .text_resume {
+                margin-left: 12%;
+
+                p{
+                    font-family: $outfit;
+                    font-weight: 400;
+                    font-size: 20px;
+                    color: $gray2;
+                }
+            }
+
+            &_liste {
+                display: flex;
+
+                li {
+                    $font-family: $outfit;
+                    color: $gray2;
+                    margin-bottom: 1rem;
+                }
+
+                ul {
+                    margin-left: 12%;
+                }
+
+                ul:nth-of-type(2) {
+                    margin-left: 18%;
+                }
+            }
+        }
+
+        img {
+            width: 55%;
+            object-fit: cover;
+        }
+        
+        .produit_link {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 5%;
+            width: 70%;
+            margin-left: 6rem;
+            text-align: center;
+
+        
+        }
+
+        .produit_link a:nth-of-type(1) {
+            justify-content: center;
+            font-family: $outfit;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: white;
+            padding: 10px 50px 10px 50px;
+            background-color: $green2;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+
+        .produit_link a:nth-of-type(1):hover {
+            background-color: $green;
+        }
+
+        .produit_link a:nth-of-type(2){
+            font-family: $outfit;
+            font-weight: lighter;
+            font-size: 1.5rem;
+            color: #538D22;
+            padding: 10px 50px 10px 50px;
+            background-color: white;
+            border: 2px solid #538D22;
+            border-radius: 6px;
+        }
+    }
+}
+
+.card_produit_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+    grid-gap: 1%;
+
+
+    &_content {
+        @extend .card_reservation_content;
+
+        margin-top: 0%;
+        margin-left: 0%;
+    }
+}
+

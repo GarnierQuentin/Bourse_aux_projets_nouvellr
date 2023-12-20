@@ -1,0 +1,25 @@
+footer {
+
+    .site-info {
+
+        display: flex;
+        background-color: #1A4301;
+        color: #fff;
+        padding: 3rem;
+        text-align: center;
+        justify-content: center; 
+        
+        .footer_liste {
+            display: flex;
+            gap: 10rem;
+
+            li {
+                font-size: 1.5rem;
+                font-weight: 600;
+                font-family: "palitoon";
+            }
+        }
+    }
+
+    
+}

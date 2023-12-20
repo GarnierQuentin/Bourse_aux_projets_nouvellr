@@ -1,0 +1,101 @@
+.card_inscription{
+    background-image: url(http://ressourcerie-torcy.test/wp-content/uploads/2023/12/inscription_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 130vh;
+
+  
+   p {
+    font-family: $outfit;
+    font-size: 15px;
+    color: $green;
+    font-weight: 400;
+
+   }
+
+    &_content {
+        position: relative;
+        top: 5%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-content: center;
+        height: 90vh;
+        width: 70%;
+        margin-left: 20%;
+        background-color: rgba(239, 239, 239, 0.5);
+
+        .title_inscription{
+            display: flex;
+            justify-content: center;
+            grid-column: span 2;
+    
+            h1 {
+                font-family: $palitoon;
+                font-size: 50px;
+                color: white;
+            }
+        }
+
+        &_form {
+            grid-column: 1/2;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        input {
+            padding: 10px 200px 10px 20px;
+            border-radius: 16px;
+            margin-bottom: 3rem;
+            margin-left: 5rem;
+            border: none;
+        }
+    }
+
+    .form_name {
+        display: flex;
+
+        input {
+            padding: 10px 0px 10px 20px;
+            margin-left: 5rem;
+        }
+
+        input:nth-of-type(2) {
+            margin-left: 1rem;
+
+        }
+    }
+
+    .inscription_checkbox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        
+        
+    }
+    .inscription_checkbox input[type="checkbox"] {
+        margin: 0; /* Réinitialise les marges par défaut */
+        padding: 0; /* Réinitialise le rembourrage par défaut */
+        align-self: center; /* Centrer verticalement */
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+
+    .inscription_submit {
+        display: flex;
+        justify-content: center;
+        grid-column: span 2;
+
+        input {
+            color: white;
+            background-color: $green2;
+            border-radius: 8px;
+            padding: 10px 100px 10px 100px;
+            margin-right: 15%;
+        }
+    }
+    
+}
+

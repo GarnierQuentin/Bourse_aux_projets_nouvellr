@@ -1,0 +1,86 @@
+.title_saisie{
+    display: flex;
+    justify-content: center !important;
+
+    h1 {
+        color: $green2;
+        font-family: $outfit;
+        text-decoration: underline #1A4301;
+        font-weight: 400;
+        font-size: 40px;
+    }
+}
+
+.card_saisie {
+    height: 90vh;
+    width: 100%;
+    background-image: url(http://ressourcerie-torcy.test/wp-content/uploads/2023/12/saisie_bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 32px;
+    overflow: hidden;
+
+    
+
+    .card_saisie_content {
+        display: flex;
+        width: 50%;
+        margin-left: 23%;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.5);
+
+        .card_saisie_liste{
+            li {
+                
+                font-family: $outfit;
+                font-size: $size;
+                padding: 10px 0px 0px 20px;
+                border-radius: 8px;
+                margin-left: 1rem;
+                margin-bottom: 2%;
+            }
+
+            li:first-child {
+                margin-top: 5%;
+            }
+        }
+
+        .card_saisie_link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+
+            a {
+                font-family: $outfit;
+                font-size: $size;
+                padding: 16px 50px 16px 50px;
+                border-radius: 8px;
+                font-weight: bold;
+                background-color: $green2;
+            }
+        }
+    }
+
+
+    img {
+       height: 50vh;
+       object-fit: cover;
+       border-radius: 8px;
+        margin-right: 5%; 
+       object-fit: cover;
+    }
+
+    h2{
+        display: flex;
+        justify-content: center;
+        font-family: $palitoon;
+        color: white;
+        font-size: 55px;
+        margin-top: 3%;
+        font-weight: 400;
+    }
+
+   
+}
+

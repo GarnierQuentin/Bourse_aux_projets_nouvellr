@@ -1,0 +1,229 @@
+
+.main_connexion {
+    height: 120vh;
+    overflow: hidden;
+
+    
+}
+
+.card_connexion {
+    margin-top: 3%;
+    display: flex;
+    /* flex-direction: column;
+    align-items: center;
+    text-align:justify; */
+    width: 100%;
+    min-height: 120vh;
+    padding: 3%;    
+    background-image: url(http://ressourcerie-torcy.test/wp-content/uploads/2023/12/connexion_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+
+    &_content {
+        position: relative;
+        top: 70px;
+        margin-left: 20%;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 1% 15% 1% 15%;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 40px;
+        height: 90vh;
+    }
+
+    
+
+    @include breakpoint(1220px, 'max'){
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    @include breakpoint(1000px, 'max'){
+        /* margin-left: 8%; */
+        width: 90%; 
+    }
+
+   /*  @include breakpoint(980px, 'max'){
+        
+        width: 90%;
+    } */
+
+
+    @include breakpoint(900px, 'max'){
+        margin-left: 0%;
+        width: 100%;
+        height: 50vh;
+    }
+
+    @include breakpoint(745px, 'max'){
+        width: 110%;
+        background-size: 130%;
+        
+    }
+    
+    @include breakpoint(685px, 'max'){
+        width: 115%; 
+    }
+
+    @include breakpoint(490px, 'max'){
+        background-size: 158%;
+    }
+
+
+
+    h1 {
+        font-family: $palitoon;
+        color: $green2;
+        font-size: 80px;
+        font-weight: 400;
+        margin: 0px;
+
+
+        @include breakpoint(1000px, 'max'){
+            margin-top: 2rem;
+        }
+    }
+
+    p {
+        color: black;
+    }
+
+    .texte_champ p {
+        color: $lightgreen;
+        text-align: left;
+        margin-bottom: 3%;
+
+        @include breakpoint(490px, 'max'){
+            font-size: 12px;
+        }
+
+    }
+
+    
+
+    .login_connexion {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    
+       
+        input {
+            padding: 25px 100px 25px 20px;
+            background-color: white;
+            border-radius: 8px;
+            margin-top: 3rem;
+            font-family: $outfit;
+            font-weight: lighter;
+            font-size: large;
+            border: 0px;
+
+
+
+           /*  @include breakpoint(1200px, 'max'){
+                padding: 25px 500px 25px 20px;
+                
+            }
+
+            @include breakpoint(1000px, 'max'){
+                padding: 25px 370px 25px 20px;
+            }
+
+            @include breakpoint(800px, 'max'){
+                padding: 15px 250px 15px 20px;
+            }
+
+            @include breakpoint(630px, 'max'){
+                padding: 15px 150px 15px 15px;
+                font-size: 12px;
+
+            }
+
+            @include breakpoint(490px, 'max'){
+                
+                width: 21rem;
+                padding: 15px 50px 15px 10px;
+                font-size: 12px;
+
+            } */
+
+            @include breakpoint(435px, 'max'){ 
+                /* margin-left: 7%; */
+                width: 18rem;
+                /* padding: 15px 25px 15px 5px; */
+
+            } 
+
+
+            @include breakpoint(380px, 'max'){ 
+                margin-left: 0%;
+                 width: 17rem;
+            } 
+        }
+
+        input:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+   
+
+    .btn_connexion {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        
+
+        input {
+            width: 20rem;
+            color: white;
+            padding: 15px;
+            background-color: $green2;
+            font-family: $outfit;
+            font-weight: bold;
+            font-size: 25px;
+            border-radius: 8px;
+            border: 0px;
+            margin-bottom: 15px;
+
+            @include breakpoint(630px, 'max'){
+                width: 17rem;
+                padding: 25px 50px 25px 15px;
+
+            }
+
+            @include breakpoint(490px, 'max'){
+                width: 21rem;
+                padding: 25px 50px 25px 15px;
+
+            }
+
+            @include breakpoint(435px, 'max'){ 
+                width: 18rem;
+
+            }
+
+             @include breakpoint(435px, 'max'){ 
+                width: 15rem;
+                padding: 25px 50px 25px 20px;
+
+            }
+        }
+    }
+
+    .text_compte {
+        display: flex;
+        justify-content: center;
+        
+        p{
+            text-decoration: underline;
+            font-family: $outfit;
+            font-size: small;
+            font-weight: bold;
+        }
+    }
+}

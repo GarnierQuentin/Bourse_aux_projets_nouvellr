@@ -1,0 +1,167 @@
+
+
+
+header {
+    .bandeau_header {
+        background-color: #1A4301;
+        min-height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+   
+
+    p {
+        color: white;
+    }
+
+    .header_nav{
+        display: flex;
+        margin-left: 11%;
+        margin-top: 2%;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+        
+        @include breakpoint(1220px, 'max'){
+            margin-left: 5%;
+            gap: 2%;
+        }
+
+        @include breakpoint(990px, 'max'){
+          justify-content: flex-start;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+
+        .logo_shop{
+            @include breakpoint(990px, 'max'){
+                display: none;
+            
+            }
+        }
+
+        .logo_profil{
+            @extend .logo_shop;
+        }
+
+        
+        
+
+        .title_header_index h3 {
+
+            font-family: $palitoon;
+
+            @include breakpoint(990px, 'max'){
+                display: none;
+            
+            }
+        }
+
+
+
+        .logo_responsive {
+            
+            display: flex;
+            justify-content: space-between;
+
+            @include breakpoint(990px, 'max'){
+                width: 90%;
+            }
+
+        }
+
+        .logo_n {
+            img{
+                width: 150px;
+                height: 25px;
+
+                @include breakpoint(990px, 'max'){
+                    /* width: 200px; */
+                    height: 35px;
+                }
+            }
+        }
+
+        .menu_deroulant_index {
+            display: none;
+
+            @include breakpoint(990px, 'max'){
+                display: block;
+            }
+
+            img {
+                height: 15px;
+            }
+
+        }
+
+        .form_recherche{
+            display: flex;
+            align-items: center;
+
+
+            @include breakpoint(990px, 'max'){
+                width: 70%;
+            }
+
+            @include breakpoint(780px, 'max'){
+                width: 50%;
+            }
+
+            @include breakpoint(480px, 'max'){
+                width: 35%;
+            }
+
+            @include breakpoint(365px, 'max'){
+                width: 25%;
+            }
+
+            
+
+            input {
+                padding: 10px 250px 10px 10px;
+                border-radius: 16px;
+
+                @include breakpoint(990px, 'max'){
+                    padding: 10px 100% 10px 10px;
+                }
+            }
+
+            .logo_loop{
+                position: absolute;
+                right: 42%;
+                transform: translate(-50%);
+                cursor: pointer;
+
+                @include breakpoint(1000px, 'max'){
+                    right: 35%;
+                }
+
+                @include breakpoint(990px, 'max'){
+                    right: 15%;
+                }
+
+                @include breakpoint(780px, 'max'){
+                    right: 25%;
+                }
+
+                @include breakpoint(365px, 'max'){
+                    right: 15%;
+                }
+            }
+
+        }
+    }
+
+
+}
+
+
+/* @include breakpoint(1000px, 'max'){
+    margin-top: 150px;
+    font-size: 60px;
+}
+ */
