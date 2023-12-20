@@ -10,6 +10,9 @@ header {
         align-items: center;
     }
 
+    h3 {
+        font-family: $palitoon;
+    }
    
 
     p {
@@ -18,56 +21,57 @@ header {
 
     .header_nav{
         display: flex;
-        margin-left: 11%;
+        margin-left: 3%;
         margin-top: 2%;
         justify-content: center;
         align-items: center;
-        gap: 5%;
+        gap: 3%;
         
-        @include breakpoint(1220px, 'max'){
-            margin-left: 5%;
+        @include breakpoint(1250px, 'max'){
+            margin-left: 1%;
             gap: 2%;
         }
 
-        @include breakpoint(990px, 'max'){
+        @include breakpoint(1090px, 'max'){
+            margin-left: 0%;
+            gap: 1%;
+        }
+
+        @include breakpoint(1000px, 'max'){
           justify-content: flex-start;
           flex-direction: column;
           align-items: flex-start;
+            margin-left: 3%;
         }
 
 
-        .logo_shop{
-            @include breakpoint(990px, 'max'){
+        .logo_header{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: 30px;
+            }
+
+
+            @include breakpoint(1000px, 'max'){
                 display: none;
             
             }
         }
 
-        .logo_profil{
-            @extend .logo_shop;
-        }
+     
 
         
-        
-
-        .title_header_index h3 {
-
-            font-family: $palitoon;
-
-            @include breakpoint(990px, 'max'){
-                display: none;
-            
-            }
-        }
-
-
 
         .logo_responsive {
             
             display: flex;
             justify-content: space-between;
 
-            @include breakpoint(990px, 'max'){
+            @include breakpoint(1000px, 'max'){
                 width: 90%;
             }
 
@@ -79,8 +83,18 @@ header {
                 height: 50px;
                 /* object-fit: cover; */
 
-                @include breakpoint(990px, 'max'){
-                    /* width: 200px; */
+                @include breakpoint(1250px, 'max'){
+                    width: 200px;
+                    height: 40px;
+                }
+
+                @include breakpoint(1090px, 'max'){
+                    width: 175px;
+                    height: 30px;
+                }
+
+                @include breakpoint(1000px, 'max'){
+                    width: 200px;
                     height: 35px;
                 }
             }
@@ -88,9 +102,44 @@ header {
 
         .menu_deroulant_index {
             display: none;
+            
 
-            @include breakpoint(990px, 'max'){
-                display: block;
+            @include breakpoint(1000px, 'max'){
+                display: inline-block;
+                position: relative;
+
+                .sous-menu {
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    right: 100%; /* Afficher le sous-menu à gauche de l'élément */
+                    background-color: #fff;
+                    border: 1px solid #ccc;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    padding: 10px;
+                    list-style: none;
+                    margin: 0;
+                    gap: 1rem;
+                }
+            
+                &:hover .sous-menu {
+                    display: flex;
+           
+                }
+
+                li {
+                 
+
+                    a {
+                        color: black;
+                        text-decoration: none;
+                        font-family: $palitoon;
+                        font-size: 20px;
+                        font-weight: 400;
+                    }
+                    margin-bottom: 8px;
+
+                }
             }
 
             img {
@@ -104,16 +153,16 @@ header {
             align-items: center;
 
 
-            @include breakpoint(990px, 'max'){
+            @include breakpoint(1000px, 'max'){
                 width: 70%;
             }
 
             @include breakpoint(780px, 'max'){
-                width: 50%;
+                width: 55%;
             }
 
-            @include breakpoint(480px, 'max'){
-                width: 35%;
+            @include breakpoint(500px, 'max'){
+                width: 45%;
             }
 
             @include breakpoint(365px, 'max'){
@@ -126,7 +175,15 @@ header {
                 padding: 10px 250px 10px 10px;
                 border-radius: 16px;
 
-                @include breakpoint(990px, 'max'){
+                @include breakpoint(1250px, 'max'){
+                    padding: 10px 150px 10px 10px;
+                }
+
+                @include breakpoint(1090px, 'max'){
+                    padding: 10px 100px 10px 10px;
+                }
+
+                @include breakpoint(1000px, 'max'){
                     padding: 10px 100% 10px 10px;
                 }
             }
@@ -137,21 +194,18 @@ header {
                 transform: translate(-50%);
                 cursor: pointer;
 
+                @include breakpoint(1250px, 'max'){
+                    right: 46%;
+                }
+
+                @include breakpoint(1090px, 'max'){
+                    right: 50%;
+                }
+
                 @include breakpoint(1000px, 'max'){
-                    right: 35%;
+                    display: none;
                 }
 
-                @include breakpoint(990px, 'max'){
-                    right: 15%;
-                }
-
-                @include breakpoint(780px, 'max'){
-                    right: 25%;
-                }
-
-                @include breakpoint(365px, 'max'){
-                    right: 15%;
-                }
             }
 
         }
