@@ -2,6 +2,10 @@
 
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1; /* Adjust the z-index as needed */
+    background-color: white;
     .bandeau_header {
         background-color: #1A4301;
         min-height: 50px;
