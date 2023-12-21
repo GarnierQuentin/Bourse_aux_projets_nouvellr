@@ -71,6 +71,7 @@ $count_products = 0;
                 $count_products++;
                 // Afficher les détails du produit
                 echo "<div class='card_reservation'>";
+                echo "<a href=" . esc_url(get_permalink($product_id)) . ">";
                     echo "<div class='card_reservation_content'>";
                         echo "<img src=" . $product_image . "";
                         echo "<div class='card_reservation_content_text1'>";
@@ -79,8 +80,8 @@ $count_products = 0;
                         echo "<div class='card_reservation_content_text2'>";
                             echo "<p>" . wc_price($product_price) . "</p>";
                         echo "</div>";
-                        echo '<a href="' . esc_url(get_permalink($product_id)) . '">Voir le produit</a>';   
-                    echo "</div>";        
+                    echo "</div>";
+                    echo '</a>';           
                 echo "</div>";
             }
         }

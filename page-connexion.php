@@ -10,10 +10,7 @@ function custom_login_process() {
         if ($user && wp_check_password($password, $user->user_pass, $user->ID)) {
             // Connexion réussie
             wp_set_auth_cookie($user->ID, true);
-            echo '<p class="success-message">Connexion réussie.</p>';
-        } else {
-            // Échec de la connexion
-            echo '<p class="error-message">Adresse e-mail ou mot de passe incorrect.</p>';
+            wp_redirect("profil");
         }
     }
 }
