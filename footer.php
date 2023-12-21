@@ -15,9 +15,9 @@
 		<div class="site-info">
 				<ul class="footer_liste">
 					<li> <a href="nous-retrouver">Nos engagements</a></li>
-					<li> A Propos</li>
-					<li> Mentions légales</li>
-					<li> Contactez nous ici</li>
+					<li> <a href="a-propos">A Propos</a></li>
+					<li> <a href="conditions">Mentions légales</a></li>
+					<li> <a href="politique-confidentialite">Politique de confidentialité</a></li>
 				</ul>
 				<div class="footer_hr">
 					<hr>
