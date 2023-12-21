@@ -48,7 +48,7 @@
 				</div>
 			</div>
 
-			<form action="index.php" method="post" class="form_recherche">
+			<form action="http://localhost/bap/" method="post" class="form_recherche">
 				<label for="recherche_produit">	</label>
 				<input type="text" name="search" placeholder="Rechercher un produit">
 				<img class="logo_loop" src="http://bap.test/wp-content/uploads/2023/12/loop.png" alt="logo loop">
