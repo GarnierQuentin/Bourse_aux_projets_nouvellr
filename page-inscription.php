@@ -1,25 +1,19 @@
 <?php
+$id_pris = false;
+$email_pris = false;
 
 if (isset($_POST['id']) && isset($_POST['mot_de_passe']) && isset($_POST['email']) && isset($_POST['prenom']) && isset($_POST['nom'])) {
-    echo 'Je ressois les données';
     if ($_POST['id'] != '' && $_POST['mot_de_passe'] != '' && $_POST['email'] != '' && $_POST['prenom'] != '' && $_POST['nom'] != '') {
-        echo 'Je remplis les conditions';
         if (username_exists($_POST['id'])) {
             // L'ID est déjà pris
-            echo "Erreur : L'ID est déjà pris par un autre utilisateur.";
+            $id_pris = true;
+
         } else if (email_exists($_POST['email'])) {
             // L'adresse e-mail est déjà prise
-            echo "Erreur : L'adresse e-mail est déjà prise par un autre utilisateur.";
+            $email_pris = true;
+
         } else {
             // L'ID est disponible
-            echo 'Je peux créer l\'utilisateur';
-            if ($_POST['user_adresse'] == '') {
-                $_POST['user_adresse'] = 'Non renseigné';
-            }
-
-            if ($_POST['phone_number'] == '') {
-                $_POST['phone_number'] = 'Non renseigné';
-            }
 
             $user_data = array(
                 'user_login'    => $_POST['id'],
@@ -37,6 +31,11 @@ if (isset($_POST['id']) && isset($_POST['mot_de_passe']) && isset($_POST['email'
             
             $user = new WP_User($user_id);
             $user->set_role('client');
+
+            $user_email = sanitize_email($_POST['email']);
+            $user = get_user_by('email', $user_email);
+            wp_set_auth_cookie($user->ID, true);
+            wp_redirect("profil");
         }
     } else {
         // Afficher un message d'erreur si les champs requis ne sont pas remplis
@@ -66,6 +65,12 @@ get_header();
                 <div class="card_inscription_content_form">
 
                     <form action="" method="post">
+                        <?php
+                        if ($id_pris == true) {
+                            echo "<br>";
+                            echo "L'ID est déjà pris par un autre utilisateur.";
+                        }
+                        ?>
                         <input type="text" name="id" placeholder="Identifiant" required>
 
                         <div class="form_name">
@@ -76,7 +81,12 @@ get_header();
 
                         </div>
 
-
+                        <?php
+                        if ($email_pris == true) {
+                            echo "<br>";
+                            echo "L'adresse e-mail est déjà prise par un autre utilisateur.";
+                        }
+                        ?>
                         <input type="email" name="email" placeholder="Adresse e-mail" required>
 
                         <input type="password" name="mot_de_passe" placeholder="Mot de passe" required>
