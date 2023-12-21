@@ -76,7 +76,7 @@
 				$user_role = $user_info->roles;
 				if ($user_role[0] == 'administrator'){
 					?>
-					<a href="../wp-admin">
+					<a href="http://localhost/bap/wp-admin/">
 						<div class="logo_header">
 							<img  src="http://bap.test/wp-content/uploads/2023/12/logo_admin.png" alt="logo admin">
 							<h3> PAGE ADMINISTRATEUR</h3>
