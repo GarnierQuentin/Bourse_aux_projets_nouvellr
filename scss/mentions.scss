@@ -1,0 +1,83 @@
+.card_mentions {
+    height: 100%;
+    width: 100%;
+    background-image: url(http://ressourcerie-torcy.test/wp-content/uploads/2023/12/mentions_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: initial;
+
+    @include breakpoint(1000px, 'max') {
+        background-size: 120%;
+    }
+
+    @include breakpoint(750px, 'max') {
+        background-size: 180%;
+    }
+
+    @include breakpoint(600px, 'max') {
+        background-size: 280%;
+        background-position: center;
+    }
+
+    &_content {
+        width: 70%;
+        margin-left: 16%;
+        margin-top: 5%;
+        padding: 4%;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.5);
+
+        @include breakpoint(750px, 'max') {
+            width: 80%;
+            margin-left: 10%;
+        }
+
+
+        &_title {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+
+            h2 {
+                color: #1A4301;
+                font-family: Palitoon;
+                font-size: 60px;
+                font-style: normal;
+                font-weight: 400;
+            
+            }
+        }
+
+        &_hr {
+            
+            hr {
+                margin-left: 14%;
+                width: 75%;
+                border: 1px solid #AAD576;
+                margin-bottom: 2rem;
+            }
+            
+        }
+
+        &_texte {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            justify-content: center;
+            text-align: justify;
+            /* width: 50%; */
+    
+            p {
+                font-family: $outfit;
+                color: black;
+                font-size: $size;
+            }
+        }
+
+    }
+    
+
+
+
+    
+}
