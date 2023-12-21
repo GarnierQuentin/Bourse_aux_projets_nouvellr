@@ -1,23 +1,53 @@
 <?php
+if (!is_user_logged_in()) {
+    // L'utilisateur n'est pas connecté
+    wp_redirect( 'connexion' );
+}
+
 get_header();
 $count_products = 0;
 
-
-if (is_user_logged_in()) {
-    // L'utilisateur est connecté, affichez du contenu réservé aux utilisateurs connectés ici
     ?>
 
-    <h1>MON PROFIL</h1>
-    <h3> Mes informations</h3>
-
-    <div class="informations">
-        <div class="infos_de_contact">
-            <?php
-            echo "<div class='user_name'>" . wp_get_current_user()->display_name . "</div>";
-            echo "<div class='user_mail'>" . wp_get_current_user()->user_email . "</div>";
-            ?>
+    <main class="main_profil">
+        <div class="title_profil">
+            <h1> MON PROFIL</h1>
         </div>
-    </div>
+
+        <div class="compte_title">
+            <h4> Mes informations</h4>
+        </div>
+        <div class="compte_hr">
+            <hr>
+        </div>
+       
+        <div class="card_info">
+            
+            <div class="information_liste">
+            <ul>  <h3> Infos de contact</h3>
+                <?php
+                echo "<li>" . wp_get_current_user()->display_name . "</li>";
+                echo "<li>" . wp_get_current_user()->user_email . "</li>";
+                ?>
+            </ul>
+
+            <ul>  <h3> Adresse de facturation</h3>
+                <li>Torcy, 77468</li>
+                <li>18 rue d'Anjoux</li>
+                <li>France</li>
+            </ul>
+            </div>
+           
+           
+        </div>
+
+        <div class="compte_title">
+        <h4> Mes réservations</h4>
+        </div>
+        
+        <div class="compte_hr">
+            <hr>
+        </div>
     <?php
 
     $products = wc_get_products(array(
@@ -40,35 +70,27 @@ if (is_user_logged_in()) {
             if ($reserveur == get_current_user_id()) {
                 $count_products++;
                 // Afficher les détails du produit
-                echo '<div class="product-image">' . $product_image . '</div>';
-                echo '<h2>' . esc_html($product_title) . '</h2>';
-                echo '<p>Prix : ' . wc_price($product_price) . '</p>';
+                echo "<div class='card_reservation'>";
+                    echo "<div class='card_reservation_content'>";
+                        echo "<img src=" . $product_image . "";
+                        echo "<div class='card_reservation_content_text1'>";
+                            echo "<p>" . esc_html($product_title) . "</p>";
+                        echo "</div>";
+                        echo "<div class='card_reservation_content_text2'>";
+                            echo "<p>" . wc_price($product_price) . "</p>";
+                        echo "</div>";
+                        echo '<a href="' . esc_url(get_permalink($product_id)) . '">Voir le produit</a>';   
+                    echo "</div>";        
+                echo "</div>";
             }
         }
     }
+    ?>
+    </main>
+    <?php
     if ($count_products == 0) {
         echo "<p>Vous n'avez pas encore réservé de produits.</p>";
     }
-} else {
-    // L'utilisateur n'est pas connecté, affichez un message ou le formulaire de connexion ici
-    ?>
-    <body>
-        <div>
-            <p>Veuillez vous connecter ou créer un compte pour accéder au contenu réservé aux utilisateurs connectés.</p>
-        </div>
-        <div>
-            <button>
-                <a href="connexion">Se connecter</a>
-            </button>
-
-            <button>
-                <a href="inscription">S'inscrire</a>
-            </button>
-        </div>
-    </body>
-    <?php
-}
-
 
 
 get_footer();
