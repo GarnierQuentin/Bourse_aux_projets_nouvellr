@@ -249,28 +249,13 @@
 
             
             @include breakpoint(1200px, 'max'){
-                height: 30vh;
+                width: 80%;
             }
 
             @include breakpoint(1100px, 'max'){
-                height: 25vh;
+                width: 75%;
             }
 
-            @include breakpoint(1000px, 'max'){
-                height: 20vh;
-            }
-
-            @include breakpoint(780px, 'max'){
-                height: 20vh;
-            }
-
-            @include breakpoint(630px, 'max'){
-                height: 18vh;
-            }
-
-            /* @include breakpoint(540px, 'max'){
-                height: 16vh;
-            } */
 
 
         }
