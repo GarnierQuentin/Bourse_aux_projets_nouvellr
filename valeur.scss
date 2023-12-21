@@ -1,0 +1,178 @@
+.valeur_title {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $outfit;
+    color: black;
+    text-decoration: underline;
+    flex-direction: column;
+    margin-bottom: 2%;
+
+    p {
+        font-size: 30px;
+        color: black;
+    }
+
+    h4 {
+        font-size: 35px;
+        font-weight: bold;
+    }
+}
+
+.valeur_card {
+    width: 100%;
+    height: auto;
+    background-image: url(http://bap.test/wp-content/uploads/2023/12/apropos_final_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 5rem;
+
+    @include breakpoint(1000px, 'max'){
+        background-size: 130%;
+        background-position: center;
+    }
+
+    @include breakpoint(800px, 'max'){
+        background-size: 150%;
+    }
+
+    @include breakpoint(700px, 'max'){
+        background-size: 180%;
+    }
+
+    @include breakpoint(600px, 'max'){
+        background-size: 270%;
+    }
+
+    @include breakpoint(500px, 'max'){
+        background-size: 330%;
+    }
+
+    @include breakpoint(450px, 'max'){
+        background-size: 400%;
+    }
+
+    /* @include breakpoint(490px, 'max'){
+        background-size: 300%;
+    } */
+
+    &_content {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h3 {
+            margin-top: 5%;
+            margin-bottom: 5%;
+            color: #AAD576;
+            font-family: $palitoon;
+            font-size: 60px;
+            font-weight: 400;
+            text-decoration: underline;
+
+            @include breakpoint(1000px, 'max'){
+                font-size: 50px;
+            }
+        }
+
+        img  {
+            margin-top: 5%;
+            width: 30%;
+
+
+            @include breakpoint(800px, 'max'){
+                width: 45%;
+            }
+
+            @include breakpoint(600px, 'max'){
+                width: 60%;
+            }
+
+            @include breakpoint(500px, 'max'){
+                width: 70%;
+            }
+        }
+
+
+        &_logo {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            width: 75%;
+
+            @include breakpoint(1000px, 'max'){
+                flex-direction: column;
+                align-items: center;
+                /* margin-left: 5rem; */
+            }
+
+            img {
+                width: 70%;
+
+                @include breakpoint(1000px, 'max'){
+                    width: 30%;
+            }
+
+            @include breakpoint(800px, 'max'){
+                width: 20%;
+        }
+
+        @include breakpoint(600px, 'max'){
+            width: 30%;
+    }
+
+        }
+            p {
+                color: white;
+                font-weight: 100;
+                font-family: $outfit;
+                font-size: 25px;
+
+                @include breakpoint(1000px, 'max'){
+                    font-size: 20px;
+                }
+
+                @include breakpoint(800px, 'max'){
+                    font-size: 15px;
+                }
+
+            
+
+            }
+
+            &_left {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 40%;
+
+                p {
+                    @include breakpoint(1000px, 'max'){
+                        color: #AAD576;
+                        text-align: center;
+                        font-family: $outfit;
+                        font-size: 22px;
+                        font-style: normal;
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            &_right {
+                
+                p {
+                color: white;
+                font-family: $outfit;
+                font-size: $size;
+                margin-left: 5%;
+                font-weight: 400;
+                text-align: justify;
+                margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+}
