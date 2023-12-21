@@ -14,7 +14,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
 				<ul class="footer_liste">
-					<li> Nos engagements</li>
+					<li> <a href="nous-retrouver">Nos engagements</a></li>
 					<li> A Propos</li>
 					<li> Mentions légales</li>
 					<li> Contactez nous ici</li>
