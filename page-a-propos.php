@@ -7,7 +7,13 @@ get_header();
     <div class="apropos_desc">
         <div class="apropos_desc_content">
             <h2> DESCRIPTION</h2>
-            <img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/apropos_etapes-1.png" alt="">
+            <div class="apropos_desc_content_imgpc">
+            <img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/apropos_etapes.png" alt="">
+            </div>
+            <div class="apropos_desc_content_imgmobile">
+            <img src="http://ressourcerie-torcy.test/wp-content/uploads/2023/12/etapes_valeur_responsive.png" alt="">
+            </div>
+             
             <hr>
             <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                  Non molestias rerum voluptas eos error reiciendis facilis
@@ -27,12 +33,23 @@ get_header();
                 <h2> C'est ici qu'on vous répond !</h2>
             </div>        
             <form action="">
-            <div class="apropos_input">
+            <div class="apropos_input_question">
             <input type="text" placeholder="Écrivez ici">
             </div>
+            <div class="apropos_input_reponse">
+            <input type="text" placeholder="Détaillez votre demande">
+            </div>
+            <div class="apropos_input_submit">
+                <input type="submit" value="Envoyer">
+            </div>
+           
             
          </form>
          </div>
         
     </div>
 </main>
+
+<?php
+get_footer();
+?>

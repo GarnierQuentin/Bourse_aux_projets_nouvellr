@@ -1663,33 +1663,15 @@ p {
 .card_reservation_content img {
   margin-top: 7%;
   height: auto;
-  /* @include breakpoint(540px, 'max'){
-      height: 16vh;
-  } */
 }
 @media screen and (max-width: 1200px) {
   .card_reservation_content img {
-    height: 30vh;
+    width: 80%;
   }
 }
 @media screen and (max-width: 1100px) {
   .card_reservation_content img {
-    height: 25vh;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .card_reservation_content img {
-    height: 20vh;
-  }
-}
-@media screen and (max-width: 780px) {
-  .card_reservation_content img {
-    height: 20vh;
-  }
-}
-@media screen and (max-width: 630px) {
-  .card_reservation_content img {
-    height: 18vh;
+    width: 75%;
   }
 }
 .card_reservation_content a {
@@ -2212,12 +2194,36 @@ section {
 }
 
 .apropos_desc {
+  margin-top: 3rem;
   width: 100%;
-  height: 150vh;
+  height: 130vh;
   background-image: url(http://ressourcerie-torcy.test/wp-content/uploads/2023/12/apropos_bg_desc.png);
   background-repeat: no-repeat;
   background-size: 100%;
   overflow: hidden;
+  margin-bottom: 3rem;
+}
+@media screen and (max-width: 900px) {
+  .apropos_desc {
+    background-size: 110%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  .apropos_desc {
+    background-size: 120%;
+    /* height: 120vh; */
+  }
+}
+@media screen and (max-width: 570px) {
+  .apropos_desc {
+    background-size: 140%;
+  }
+}
+@media screen and (max-width: 470px) {
+  .apropos_desc {
+    background-size: 180%;
+  }
 }
 .apropos_desc_content {
   margin-top: 10%;
@@ -2229,6 +2235,34 @@ section {
   width: 60%;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 3%;
+}
+@media screen and (max-width: 1290px) {
+  .apropos_desc_content {
+    width: 80%;
+    margin-left: 15%;
+    margin-top: 8%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .apropos_desc_content {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 8%;
+  }
+}
+@media screen and (max-width: 890px) {
+  .apropos_desc_content {
+    width: 95%;
+    margin-left: 0%;
+    margin-top: 8%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .apropos_desc_content {
+    width: 85%;
+    margin-left: 10%;
+    margin-top: 8%;
+  }
 }
 .apropos_desc_content h2 {
   margin-bottom: 5%;
@@ -2242,8 +2276,46 @@ section {
   border: 1px solid #AAD576;
   margin-bottom: 1rem;
 }
-.apropos_desc_content img {
+.apropos_desc_content_imgpc img {
+  display: block;
   margin-bottom: 1rem;
+  width: 70%;
+  margin-left: 20%;
+}
+@media screen and (max-width: 1100px) {
+  .apropos_desc_content_imgpc img {
+    margin-left: 25%;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 945px) {
+  .apropos_desc_content_imgpc img {
+    width: 55%;
+    margin-left: 25%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .apropos_desc_content_imgpc img {
+    width: 70%;
+    margin-left: 20%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .apropos_desc_content_imgpc img {
+    display: none;
+  }
+}
+.apropos_desc_content_imgmobile img {
+  width: 90%;
+  display: none;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  margin-left: 0%;
+}
+@media screen and (max-width: 640px) {
+  .apropos_desc_content_imgmobile img {
+    display: block;
+  }
 }
 .apropos_desc_content p {
   color: black;
@@ -2252,13 +2324,51 @@ section {
   font-weight: 400;
   text-align: justify;
 }
+@media screen and (max-width: 945px) {
+  .apropos_desc_content p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .apropos_desc_content p {
+    font-size: 15px;
+  }
+}
 
 .apropos_question {
   width: 100%;
   height: 130vh;
-  background-image: url(http://ressourcerie-torcy.test/wp-content/uploads/2023/12/apropos_question_bg.png);
+  background-image: url(http://ressourcerie-torcy.test/wp-content/uploads/2023/12/background_apropos.png);
   background-repeat: no-repeat;
   background-size: 100%;
+}
+@media screen and (max-width: 1250px) {
+  .apropos_question {
+    background-size: 120%;
+    height: 130vh;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .apropos_question {
+    background-size: 140%;
+    /* height: auto; */
+  }
+}
+@media screen and (max-width: 950px) {
+  .apropos_question {
+    background-size: 160%;
+    /* height: 120vh; */
+  }
+}
+@media screen and (max-width: 780px) {
+  .apropos_question {
+    background-size: 200%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .apropos_question {
+    background-size: 230%;
+  }
 }
 .apropos_question_content {
   display: flex;
@@ -2268,29 +2378,120 @@ section {
   flex-direction: column;
 }
 .apropos_question_content1 h2 {
-  margin-top: 45%;
-  margin-bottom: 1rem;
+  margin-top: 70%;
   color: #1A4301;
   font-family: "Palitoon", sans-serif;
   font-size: 45px;
   font-weight: 400;
   text-decoration: underline;
 }
+@media screen and (max-width: 1100px) {
+  .apropos_question_content1 h2 {
+    font-size: 35px;
+  }
+}
 .apropos_question_content2 {
   margin-bottom: 5%;
   color: white;
   font-family: "Palitoon", sans-serif;
-  font-size: 35px;
+  font-size: normal;
+  font-size: 30px;
   font-weight: 100;
 }
-.apropos_question_content .apropos_input {
-  width: 100%;
+@media screen and (max-width: 1100px) {
+  .apropos_question_content2 {
+    font-size: 25px;
+  }
 }
-.apropos_question_content .apropos_input input {
-  padding: 2% 80% 2% 80%;
+@media screen and (max-width: 950px) {
+  .apropos_question_content2 {
+    font-size: 20px;
+  }
+}
+.apropos_question_content .apropos_input_question input {
+  padding: 10px 600px 10px 20px;
+  width: 100%;
   font-family: "Outfit", sans-serif;
   font-weight: bold;
   font-size: 20px;
+  border: 0px;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 1100px) {
+  .apropos_question_content .apropos_input_question input {
+    padding: 10px 400px 10px 20px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .apropos_question_content .apropos_input_question input {
+    padding: 10px 200px 10px 20px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .apropos_question_content .apropos_input_question input {
+    padding: 10px 100px 10px 20px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .apropos_question_content .apropos_input_question input {
+    padding: 10px 50px 10px 20px;
+  }
+}
+.apropos_question_content .apropos_input_reponse input {
+  padding: 10px 600px 200px 20px;
+  width: 100%;
+  font-family: "Outfit", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  border: 0px;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 1100px) {
+  .apropos_question_content .apropos_input_reponse input {
+    padding: 10px 400px 200px 20px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .apropos_question_content .apropos_input_reponse input {
+    padding: 10px 200px 200px 20px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .apropos_question_content .apropos_input_reponse input {
+    padding: 10px 100px 200px 20px;
+  }
+}
+@media screen and (max-width: 600p) {
+  .apropos_question_content .apropos_input_reponse input {
+    padding: 10px 50px 200px 20px;
+  }
+}
+.apropos_question_content .apropos_input_submit input {
+  color: white;
+  padding: 10px 130px 10px 130px;
+  /* width: 100%; */
+  font-family: "Outfit", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  border: 0px;
+  border-radius: 8px;
+  background-color: #1A4301;
+  /* @include breakpoint(950px,  'max' ) {
+      padding: 10px 50px 10px 50px;
+  } */
+  /* @include breakpoint(780px,  'max' ) {
+      padding: 10px 30px 10px 30px;
+  }
+   */
+}
+@media screen and (max-width: 1100px) {
+  .apropos_question_content .apropos_input_submit input {
+    padding: 10px 120px 10px 120px;
+  }
 }
 
 .card_recherche {
