@@ -1,0 +1,345 @@
+.main_profil {
+    height: auto;
+}
+
+
+.title_profil{
+    display: flex;
+    margin-left: 25%;
+
+    @include breakpoint(1100px, 'max'){
+        margin-left: 20%;
+    }
+
+    @include breakpoint(1000px, 'max'){
+        margin-left: 15%;
+    }
+
+    @include breakpoint(900px, 'max'){
+        margin-left: 10%;
+    }
+
+    @include breakpoint(800px, 'max'){
+        margin-left: 7%;
+    }
+
+    h1 {
+        color: $green2;
+        font-family: $palitoon;
+        font-size: $size_title;
+
+        @include breakpoint(1100px, 'max'){
+            text-decoration: underline;
+            font-size: 62px;
+        }
+
+    }
+}
+
+.compte_title h4 {
+    margin-left: 25%;
+    font-weight: bold;
+    font-family: $outfit;
+    font-size: 25px;
+
+    @include breakpoint(1100px, 'max'){
+        margin-left: 20%;
+    }
+
+    @include breakpoint(1000px, 'max'){
+        margin-left: 15%;
+        font-size: 35px;
+    }
+
+    @include breakpoint(900px, 'max'){
+        margin-left: 10%;
+    }
+
+    @include breakpoint(800px, 'max'){
+        margin-left: 7%;
+    }
+}
+
+.compte_hr {
+
+    hr {
+    width: 90%;
+    margin-left: 5%;
+    border: 1px solid black;
+
+    @include breakpoint(1100px, 'max'){
+        display: none;
+    }
+}
+    
+}
+
+.compte_deco {
+    
+    margin-bottom: 3%;
+    a {
+        display: flex;
+        margin-left: 7%;
+        justify-content: center; /* Centrer horizontalement */
+        align-items: center; /* Centrer verticalement */
+        color: white;
+        background-color: $green2;
+        padding: 10px 55px 10px 55px;
+        font-family: $outfit;
+        font-weight: bold;
+        border-radius: 8px;
+        /* margin-top: 4%; */
+
+    @include breakpoint(1100px, 'max'){
+        padding: 10px 70px 10px 70px;
+        width: 80%;
+        font-size: 25px;
+    }
+
+    @include breakpoint(1000px, 'max'){
+       
+    }
+}
+}
+
+
+.card_info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 7%;
+    margin-top: 1rem;
+
+    h3 {
+        font-family: $outfit;
+        font-weight: 500;
+        font-size: 25px;
+    }
+    
+
+    .information_liste{
+        display: flex;
+        margin-bottom: 2rem;
+
+        
+        li {
+            font-size: $size;
+            font-family: $outfit;   
+            align-items: center;
+            margin-right: 10rem;
+
+            @include breakpoint(1100px, 'max'){
+                margin-right: 7rem;
+            }
+
+            @include breakpoint(1000px, 'max'){
+                margin-right: 5rem;
+            }
+
+            @include breakpoint(900px, 'max'){
+                margin-right: 4rem;
+            }
+
+            @include breakpoint(800px, 'max'){
+                margin-right: 3rem;
+            }
+
+            @include breakpoint(700px, 'max'){
+                margin-right: 2rem;
+            }
+
+            @include breakpoint(600px, 'max'){
+                margin-right: 1rem;
+                font-size: 15px;
+            }
+
+            /* @include breakpoint(500px, 'max'){
+                margin-right: 0.5rem;
+            } */
+        }
+    }
+
+    .card_info_modif {
+        display: flex;
+        margin-left: auto;
+        margin-right: 5%;
+
+        p{
+            font-family: $outfit;
+            font-weight: lighter;
+        text-decoration: underline;
+        }
+    }
+}
+
+.card_reservation {
+    display: grid;
+    grid-template-columns: repeat(3, 20%);
+    justify-content: center;
+    margin-top: 3%;
+    height: 80vh;
+    width: 100%;
+    grid-gap: 3rem;
+    background-image: url(http://ressourcerie-torcy.test/wp-content/uploads/2023/12/compte_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @include breakpoint(1180px, 'max'){
+        background-size: 120%;
+    }
+
+    @include breakpoint(1050px, 'max'){
+        background-size: 150%;
+        align-items: center;
+        grid-template-columns: repeat(3, 22%);
+    }
+
+    @include breakpoint(890px, 'max'){
+        background-size: 200%;
+        grid-template-columns: repeat(3, 25%);
+        
+    }
+
+    @include breakpoint(745px, 'max'){
+        background-size: 250%;
+        grid-template-columns: repeat(3, 28%);
+        grid-gap: 1rem;
+    }
+
+    @include breakpoint(540px, 'max'){
+        background-size: 300%;
+    }
+ 
+
+
+
+    &_content {
+        
+        margin-top: 15%;
+        background-color: rgba(255, 255, 255, 0.5);
+        grid-gap: 1rem;
+        text-align: center;
+        margin-bottom: 7%;
+        height: 50vh;
+        width: 100%;
+        border-radius: 40px;
+
+        @include breakpoint(1180px, 'max'){
+            height: 45vh;
+        }
+
+        @include breakpoint(1050px, 'max'){
+            height: 40vh;
+        }
+
+        @include breakpoint(890px, 'max'){
+            height: 35vh;
+        }
+
+        @include breakpoint(745px, 'max'){
+            height: 30vh;
+        }
+
+        /* @include breakpoint(540px, 'max'){
+            height: 25vh;
+        } */
+
+        img{
+            margin-top: 7%;
+            height: auto;
+
+            
+            @include breakpoint(1200px, 'max'){
+                height: 30vh;
+            }
+
+            @include breakpoint(1100px, 'max'){
+                height: 25vh;
+            }
+
+            @include breakpoint(1000px, 'max'){
+                height: 20vh;
+            }
+
+            @include breakpoint(780px, 'max'){
+                height: 20vh;
+            }
+
+            @include breakpoint(630px, 'max'){
+                height: 18vh;
+            }
+
+            /* @include breakpoint(540px, 'max'){
+                height: 16vh;
+            } */
+
+
+        }
+
+        a {
+            color: black;
+            padding: 10px 55px 10px 55px;
+            border: 1px solid black;
+        }
+        
+        &_text1 {
+
+            p{
+                font-family: $outfit;
+                font-weight: 600;
+                font-size: 25px;
+                color: $green2;
+
+                @include breakpoint(1180px, 'max'){
+                    font-size: 20px;
+                }
+
+                @include breakpoint(1050px, 'max'){
+                    font-size: 18px;
+                }
+
+                @include breakpoint(890px, 'max'){
+                    font-size: 16px;
+                }
+
+                @include breakpoint(745px, 'max'){
+                    font-size: 14px;
+                }
+
+               /*  @include breakpoint(540px, 'max'){
+                    font-size: 12px;
+                } */
+
+
+            }
+        }
+
+        &_text2 {
+            @extend .card_reservation_content_text1;
+            p{
+                font-weight: 400;
+                font-size: 22px;
+
+                @include breakpoint(1180px, 'max'){
+                    font-size: 18px;
+                }
+
+                @include breakpoint(1050px, 'max'){
+                    font-size: 16px;
+                }
+
+                @include breakpoint(890px, 'max'){
+                    font-size: 14px;
+                }
+
+                @include breakpoint(745px, 'max'){
+                    font-size: 12px;
+                }
+
+                /* @include breakpoint(540px, 'max'){
+                    font-size: 10px;
+                } */
+            }
+        }
+       
+    }
+}

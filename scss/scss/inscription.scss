@@ -1,0 +1,239 @@
+.card_inscription{
+    margin-top: 5%;
+    background-image: url(http://ressourcerie-torcy.test/wp-content/uploads/2023/12/inscription_last_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 130vh;
+    margin-bottom: 5%;
+
+    @include breakpoint(1100px, 'max'){
+        background-size: 110%;
+    }
+
+    @include breakpoint(1000px, 'max'){
+        background-size: 180%;
+        min-height: 150vh;
+    }
+
+    @include breakpoint(800px, 'max'){
+        background-size: 210%;
+    }
+
+    @include breakpoint(680px, 'max'){
+        background-size: 255%;
+
+    }
+
+    @include breakpoint(600px, 'max'){
+        background-size: 300%;
+    }
+    
+
+    @include breakpoint(490px, 'max'){
+        background-size: 350%;
+    }
+
+  
+   p {
+    font-family: $outfit;
+    font-size: 15px;
+    color: $green;
+    font-weight: 400;
+
+   }
+
+    &_content {
+        position: relative;
+        top: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 120vh;
+        width: 45%;
+        margin-left: 28%;
+        background-color: rgba(239, 239, 239, 0.5);
+        border-radius: 40px;
+
+        @include breakpoint(1200px, 'max'){
+            width: 70%;
+            margin-left: 15%;
+        }
+
+        @include breakpoint(1000px, 'max'){
+            width: 80%;
+            margin-left: 14%;
+            height: 140vh;
+        }
+
+        @include breakpoint(800px, 'max'){
+            width: 85%;
+            margin-left: 12%;
+        }
+
+        @include breakpoint(600px, 'max'){
+            width: 90%;
+            margin-left: 6%;
+        }
+
+        @include breakpoint(490px, 'max'){
+            margin-left: 3%;
+        }
+
+        &_title {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+
+            @include breakpoint(1000px, 'max'){
+                margin-top: 15%;
+            }
+
+            h3 {
+                margin-top: 5%;
+                font-family: $outfit;
+                font-weight: 400;
+                color: black;
+            }
+
+            h3:nth-of-type(2) {
+                margin-left: 1%;
+                text-decoration: underline;
+
+               
+            }
+        }
+
+        .title_inscription{
+            display: flex;
+            justify-content: center;
+            grid-column: span 2;
+    
+            h1 {
+                font-family: $palitoon;
+                font-size: 60px;
+                color: $green2;
+            }
+
+
+        }
+
+        &_form {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            
+        }
+
+
+        input {
+            padding: 15px 250px 15px 20px;
+            border-radius: 16px;
+            margin-bottom: 3rem;
+
+
+            @include breakpoint(1000px, 'max'){
+                width: 28rem;
+            }
+
+            @include breakpoint(800px, 'max'){
+                width: 25rem;
+            }
+
+            @include breakpoint(630px, 'max'){
+                width: 24rem;
+
+            }
+
+            @include breakpoint(490px, 'max'){
+                font-size: 12px;
+               /*  width: 19rem; */
+
+            }
+            
+            border: none;
+        }
+    }
+
+    .form_name {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    
+
+        @include breakpoint(1000px, 'max'){
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input {
+            padding: 15px 0px 15px 20px;
+        }
+
+        input:nth-of-type(2) {
+            margin-left: 1rem;
+
+            @include breakpoint(1000px, 'max'){
+                margin-left: 0%;
+            }
+
+        }
+    }
+
+    .inscription_checkbox {
+        display: flex;
+        justify-content:space-around;
+        align-items: flex-start;
+        
+        input {
+            margin: auto;
+        }
+
+        p {
+            margin-left: 1rem;
+            color: $green;
+            font-size: 16px;
+            
+
+            @include breakpoint(1000px, 'max'){
+                margin-left: 0%;
+                /* margin-right: 15rem; */
+            }
+        }
+
+
+    
+    }
+
+    .inscription_submit {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+        input {
+            color: white;
+            background-color: $green2;
+            border-radius: 8px;
+            padding: 15px 200px 15px 200px;
+
+            @include breakpoint(1000px, 'max'){
+                padding: 15px 100px 15px 100px;
+            }
+
+            @include breakpoint(490px, 'max'){
+                padding: 15px 50px 15px 50px;
+            }
+
+                
+        }
+
+        input::placeholder {
+            text-align: center;
+        }
+    }
+    
+}
+
