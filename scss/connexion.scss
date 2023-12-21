@@ -20,6 +20,25 @@
     background-size: 100%;
     overflow: hidden;
 
+    @include breakpoint(1220px, 'max'){
+        background-size: cover;
+    }
+
+    /* @include breakpoint(1000px, 'max'){
+    }
+
+    @include breakpoint(900px, 'max'){
+        background-size: 110%;
+    }
+
+    @include breakpoint(745px, 'max'){
+        background-size: 115%;
+    }
+
+    @include breakpoint(685px, 'max'){
+        background-size: 120%;
+    } */
+
     &_content {
         position: relative;
         top: 70px;
@@ -33,46 +52,27 @@
         background-color: rgba(255, 255, 255, 0.5);
         border-radius: 40px;
         height: 90vh;
-    }
+
+        @include breakpoint(1000px, 'max'){
+            top: 0px;
+            width: 70%;
+        }
+
+        @include breakpoint(800px, 'max'){
+            width: 80%;
+            padding: 1% 10% 1% 10%;
+        }
+
+        @include breakpoint(630px, 'max'){
+            width: 90%;
+            margin-left: 5%;
+            padding: 1% 5% 1% 5%;
+        }
+
 
     
-
-    @include breakpoint(1220px, 'max'){
-        width: 90%;
-        margin-left: 5%;
     }
-
-    @include breakpoint(1000px, 'max'){
-        /* margin-left: 8%; */
-        width: 90%; 
-    }
-
-   /*  @include breakpoint(980px, 'max'){
-        
-        width: 90%;
-    } */
-
-
-    @include breakpoint(900px, 'max'){
-        margin-left: 0%;
-        width: 100%;
-        height: 50vh;
-    }
-
-    @include breakpoint(745px, 'max'){
-        width: 110%;
-        background-size: 130%;
-        
-    }
-    
-    @include breakpoint(685px, 'max'){
-        width: 115%; 
-    }
-
-    @include breakpoint(490px, 'max'){
-        background-size: 158%;
-    }
-
+   
 
 
     h1 {
@@ -85,6 +85,10 @@
 
         @include breakpoint(1000px, 'max'){
             margin-top: 2rem;
+        }
+
+        @include breakpoint(800px, 'max'){
+            font-size: 60px;
         }
     }
 
@@ -121,6 +125,30 @@
             font-weight: lighter;
             font-size: large;
             border: 0px;
+
+
+            @include breakpoint(1000px, 'max'){
+                padding: 25px 100px 25px 20px;
+                width: 18rem;
+            }
+
+            @include breakpoint(800px, 'max'){
+                padding: 15px 100px 15px 20px;
+                width: 21rem;
+            }
+
+            @include breakpoint(630px, 'max'){
+                padding: 15px 100px 15px 15px;
+                width: 25rem;
+
+            }
+
+            @include breakpoint(490px, 'max'){
+                padding: 15px 100px 15px 15px;
+                font-size: 12px;
+                width: 19rem;
+
+            }
 
 
 

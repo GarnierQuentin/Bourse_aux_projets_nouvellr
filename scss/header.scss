@@ -2,6 +2,11 @@
 
 
 header {
+    position: sticky;
+    top: 0px;
+    z-index: 1; /* Adjust the z-index as needed */
+    background-color: white;
+
     .bandeau_header {
         background-color: #1A4301;
         min-height: 50px;
@@ -44,22 +49,31 @@ header {
             margin-left: 3%;
         }
 
+        a {
 
-        .logo_header{
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
+            color: black;
 
-            img {
-                width: 30px;
+            .logo_header{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+    
+                img {
+                    width: 30px;
+                }
+    
+                p {
+                    color: black;
+                }
+    
+    
+                @include breakpoint(1000px, 'max'){
+                    display: none;
+                
+                }
             }
 
-
-            @include breakpoint(1000px, 'max'){
-                display: none;
-            
-            }
         }
 
      
