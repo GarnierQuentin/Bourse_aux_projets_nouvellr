@@ -2341,10 +2341,45 @@ section {
 
 .valeur_card {
   width: 100%;
-  height: 160vh;
+  height: auto;
   background-image: url(http://ressourcerie-torcy.test/wp-content/uploads/2023/12/apropos_final_bg.png);
   background-repeat: no-repeat;
   background-size: 100%;
+  margin-bottom: 5rem;
+  /* @include breakpoint(490px, 'max'){
+      background-size: 300%;
+  } */
+}
+@media screen and (max-width: 1000px) {
+  .valeur_card {
+    background-size: 130%;
+    background-position: center;
+  }
+}
+@media screen and (max-width: 800px) {
+  .valeur_card {
+    background-size: 150%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .valeur_card {
+    background-size: 180%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .valeur_card {
+    background-size: 270%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .valeur_card {
+    background-size: 330%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .valeur_card {
+    background-size: 400%;
+  }
 }
 .valeur_card_content {
   display: flex;
@@ -2357,12 +2392,33 @@ section {
   margin-bottom: 5%;
   color: #AAD576;
   font-family: "Palitoon", sans-serif;
-  font-size: 45px;
+  font-size: 60px;
   font-weight: 400;
+  text-decoration: underline;
+}
+@media screen and (max-width: 1000px) {
+  .valeur_card_content h3 {
+    font-size: 50px;
+  }
 }
 .valeur_card_content img {
   margin-top: 5%;
   width: 30%;
+}
+@media screen and (max-width: 800px) {
+  .valeur_card_content img {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .valeur_card_content img {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .valeur_card_content img {
+    width: 70%;
+  }
 }
 .valeur_card_content_logo {
   display: flex;
@@ -2370,8 +2426,30 @@ section {
   text-align: center;
   width: 75%;
 }
+@media screen and (max-width: 1000px) {
+  .valeur_card_content_logo {
+    flex-direction: column;
+    align-items: center;
+    /* margin-left: 5rem; */
+  }
+}
 .valeur_card_content_logo img {
   width: 70%;
+}
+@media screen and (max-width: 1000px) {
+  .valeur_card_content_logo img {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .valeur_card_content_logo img {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .valeur_card_content_logo img {
+    width: 30%;
+  }
 }
 .valeur_card_content_logo p {
   color: white;
@@ -2379,11 +2457,31 @@ section {
   font-family: "Outfit", sans-serif;
   font-size: 25px;
 }
+@media screen and (max-width: 1000px) {
+  .valeur_card_content_logo p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .valeur_card_content_logo p {
+    font-size: 15px;
+  }
+}
 .valeur_card_content_logo_left {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 40%;
+}
+@media screen and (max-width: 1000px) {
+  .valeur_card_content_logo_left p {
+    color: #AAD576;
+    text-align: center;
+    font-family: "Outfit", sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+  }
 }
 .valeur_card_content_logo_right p {
   color: white;
