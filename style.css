@@ -678,7 +678,7 @@ p {
   font-family: "Outfit", sans-serif;
   font-size: 20px;
   font-weight: 400;
-  color: white;
+  color: black;
 }
 
 .title1 {
@@ -769,7 +769,7 @@ p {
   font-weight: normal;
   color: #1A4301;
 }
-.card_product a, .card_recherche_content a {
+.card_product input, .card_recherche_content input {
   padding: 10px 60px !important;
   background-color: #1A4301;
   border-radius: 12px;
@@ -1561,33 +1561,15 @@ p {
 .card_reservation_content img {
   margin-top: 7%;
   height: auto;
-  /* @include breakpoint(540px, 'max'){
-      height: 16vh;
-  } */
 }
 @media screen and (max-width: 1200px) {
   .card_reservation_content img {
-    height: 30vh;
+    width: 80%;
   }
 }
 @media screen and (max-width: 1100px) {
   .card_reservation_content img {
-    height: 25vh;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .card_reservation_content img {
-    height: 20vh;
-  }
-}
-@media screen and (max-width: 780px) {
-  .card_reservation_content img {
-    height: 20vh;
-  }
-}
-@media screen and (max-width: 630px) {
-  .card_reservation_content img {
-    height: 18vh;
+    width: 75%;
   }
 }
 .card_reservation_content a {
@@ -2540,6 +2522,153 @@ p {
   font-family: "Outfit", sans-serif;
   color: black;
   font-size: 20px;
+}
+
+.card_confidentialite {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: initial;
+  background-image: url(http://bap.test/wp-content/uploads/2023/12/confidentialite_bg.png);
+}
+@media screen and (max-width: 1000px) {
+  .card_confidentialite {
+    background-size: 120%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .card_confidentialite {
+    background-size: 180%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card_confidentialite {
+    background-size: 280%;
+    background-position: center;
+  }
+}
+.card_confidentialite_content {
+  width: 70%;
+  margin-left: 16%;
+  margin-top: 5%;
+  padding: 4%;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+@media screen and (max-width: 750px) {
+  .card_confidentialite_content {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+.card_confidentialite_content_title {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.card_confidentialite_content_title h2 {
+  color: #1A4301;
+  font-family: Palitoon;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+}
+@media screen and (max-width: 1000px) {
+  .card_confidentialite_content_title h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .card_confidentialite_content_title h2 {
+    font-size: 35px;
+  }
+}
+.card_confidentialite_content p {
+  color: black;
+}
+.card_confidentialite_content_title2 {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.card_confidentialite_content_title2 h4 {
+  font-family: "Palitoon", sans-serif;
+  color: #848484;
+  font-size: 30px;
+}
+@media screen and (max-width: 1000px) {
+  .card_confidentialite_content_title2 h4 {
+    font-size: 25px;
+  }
+}
+.card_confidentialite_content ul {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.card_confidentialite_content ul li {
+  font-family: "Outfit", sans-serif;
+  color: #1A4301;
+  font-weight: 400;
+  font-size: 20px;
+}
+.card_confidentialite_content_hr hr {
+  margin-left: 14%;
+  width: 75%;
+  border: 1px solid #AAD576;
+  margin-bottom: 2rem;
+}
+.card_confidentialite_content_texte {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  margin-bottom: 2rem;
+  /* width: 50%; */
+}
+.card_confidentialite_content_texte h3 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+}
+@media screen and (max-width: 1000px) {
+  .card_confidentialite_content_texte h3 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .card_confidentialite_content_texte h3 {
+    font-size: 25px;
+  }
+}
+.card_confidentialite_content_texte h4 {
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+@media screen and (max-width: 1000px) {
+  .card_confidentialite_content_texte h4 {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .card_confidentialite_content_texte h4 {
+    font-size: 20px;
+  }
+}
+.card_confidentialite_content_texte p {
+  font-family: "Outfit", sans-serif;
+  color: black;
+  font-size: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .card_confidentialite_content_texte p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .card_confidentialite_content_texte p {
+    font-size: 15px;
+  }
 }
 
 * {
