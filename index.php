@@ -75,14 +75,15 @@ if ($products) {
         if ($est_reserve == "Non") {
             // Afficher les détails du produit
             echo "<div class='card_product'>";
+            echo '<a href="' . esc_url(get_permalink($product_id)) . '">';
             echo $product_image;
             echo "<p class='card_product_soucoupes'>" . esc_html($product_title) . "</p>";
             echo "<p class='card_product_price'>" . wc_price($product_price) . "</p>";	
-            echo '<a href="' . esc_url(get_permalink($product_id)) . '">Voir le produit</a>';
             echo '<form method="post" class="btn_reserver">';
             echo '<input type="hidden" name="product_id" value="' . esc_attr($product_id) . '">';
             echo '<input type="submit" name="reservation_button" value="Réserver">';
             echo '</form>';
+            echo '</a>';
             echo "</div>";
         }
     }
