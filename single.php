@@ -70,12 +70,16 @@ $product_categories = wc_get_product_terms($product_id, 'product_cat', array('fi
                     </div>
                     
                     <?php
-                    echo '<form method="post" class="produit_link">';
-                    echo '<input type="hidden" name="product_id" value="' . esc_attr($product_id) . '">';
-                    echo '<input type="submit" name="reservation_button" value="Réserver">';
-                    echo '</form>';
+                    $est_reserve = get_field('est_reserve', $product_id);
 
-                    echo "<br><br>";
+                    if ($est_reserve == "Non") {
+                        echo '<form method="post" class="produit_link">';
+                        echo '<input type="hidden" name="product_id" value="' . esc_attr($product_id) . '">';
+                        echo '<input type="submit" name="reservation_button" value="Réserver">';
+                        echo '</form>';
+
+                        echo "<br><br>";
+                    }
                 ?>
                 
             </div>
