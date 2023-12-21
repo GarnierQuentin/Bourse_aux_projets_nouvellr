@@ -165,8 +165,8 @@ header {
                 width: 45%;
             }
 
-            @include breakpoint(365px, 'max'){
-                width: 25%;
+            @include breakpoint(470px, 'max'){
+                width: 35%;
             }
 
             

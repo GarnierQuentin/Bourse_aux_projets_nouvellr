@@ -248,6 +248,13 @@
                 @include breakpoint(540px,  'max' ) {
                     padding: 10px 50px 10px 20px;
                 }
+
+                @include breakpoint(450px,  'max' ) {
+                    padding: 10px 50px 10px 15px;
+                    width: 90%;
+                }
+
+
             }
         }
 
@@ -276,9 +283,16 @@
                     padding: 10px 100px 200px 20px;
                 }
 
-                @include breakpoint(600p,  'max' ) {
+                @include breakpoint(600px,  'max' ) {
                     padding: 10px 50px 200px 20px;
                 }
+
+                @include breakpoint(450px,  'max' ) {
+                    padding: 10px 50px 125px 15px;
+                    width: 90%;
+                }
+
+
                 
             }
         }
