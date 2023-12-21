@@ -35,31 +35,68 @@ $poids_kg = get_field('poids_kg', $product_id);
 
 // Récupérer les catégories liées au produit
 $product_categories = wc_get_product_terms($product_id, 'product_cat', array('fields' => 'names'));
+?>
 
-// Afficher les détails du produit
-echo '<h1>' . esc_html($product_title) . '</h1>';
-echo '<p>Prix : ' . wc_price($product_price) . '</p>';
-echo '<div class="product-image">' . $product_image . '</div>';
 
-// Afficher les libellés des catégories liées au produit
-if (!empty($product_categories)) {
-    echo '<p>Catégories : ' . implode(', ', $product_categories) . '</p>';
-}
 
-// Afficher les valeurs des champs ACF "États" et "Poids (kg)"
-echo '<p>État : ' . esc_html($etat) . '</p>';
-echo '<p>Poids (kg) : ' . esc_html($poids_kg) . '</p>';
+<main class="main_produit">
 
-echo '<p>Date de publication : ' . esc_html(get_the_date()) . '</p>';
 
-echo '<form method="post">';
-echo '<input type="hidden" name="product_id" value="' . esc_attr($product_id) . '">';
-echo '<input type="submit" name="reservation_button" value="Réserver">';
-echo '</form>';
 
-echo "<br><br>";
+	
+	<div class="card_produit">
+        <div class="card_produit_content">
+            <div class="card_produit_content_img">
+                <img src=<?php echo $product_image; ?>
+            </div>
+            <div class="card_produit_content_texte">
+    
+                <?php
+                echo "<h3>" . esc_html($product_title) . "</h3>";
+                echo "<h4>" . get_post_field('post_content', $product_id) . "</h4>";
+                echo "<hr class='produit_hr'>";
+                echo "<p>" . wc_price($product_price) . "</p>";
+                echo "<hr class='produit_hr'>";
+                echo "<div class='card_produit_content_texte_liste'>";
+                    echo "<ul>";
+                        echo "<li> Poids :</li>";
+                        echo "<li> État :</li>";
+                    echo "</ul>";
+                    echo "<ul>";
+                        echo "<li>" . esc_html($poids_kg) . " kg</li>";
+                        echo "<li>" . esc_html($etat) . "</li>";
+                    ?>
+                    </ul>
+                    </div>
+                    
+                    <?php
+                    echo '<form method="post" class="produit_link">';
+                    echo '<input type="hidden" name="product_id" value="' . esc_attr($product_id) . '">';
+                    echo '<input type="submit" name="reservation_button" value="Réserver">';
+                    echo '</form>';
 
-echo do_shortcode('[contact-form-7 id="754170b" title="Formulaire de contact 1"]');
+                    echo "<br><br>";
+                ?>
+                
+            </div>
 
+                
+        </div>
+
+        <div class="card_question">
+            <?php
+            echo do_shortcode('[contact-form-7 id="754170b" title="Formulaire de contact 1"]');
+            ?>
+        </div>
+        
+           
+    </div>
+
+      
+    
+    </main>
+
+
+<?php
 get_footer();
 ?>
