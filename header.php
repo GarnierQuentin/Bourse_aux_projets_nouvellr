@@ -33,7 +33,10 @@
 		<nav class="header_nav">
 			<div class="logo_responsive">
 				<div class="logo_n">
+					
+				<a href="http://localhost/bap/">
 				<img  src="http://bap.test/wp-content/uploads/2023/12/logo_last_nouvellr.png" alt="logo Nouvell'R">
+				</a>
 				</div>
 				<div class="menu_deroulant_index">
 					<img src="http://bap.test/wp-content/uploads/2023/12/menu_header.png" alt="menu déroulant">
